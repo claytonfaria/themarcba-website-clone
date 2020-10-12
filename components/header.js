@@ -26,11 +26,10 @@ export default function Header() {
   const menuTextColor = useColorModeValue('#777777', '#FFFFFF');
   const highlightTextColor = useColorModeValue('#5c61ff', '#00c58e');
   const primaryTextColor = useColorModeValue('#777777', '#A4A7C1');
-
   return (
     <Flex
       maxW="100%"
-      paddingY={[2, 6]}
+      paddingY={[3, 6]}
       px={[4, 5]}
       marginX="auto"
       justifyContent="space-between"
@@ -77,9 +76,10 @@ export default function Header() {
             variant="ghost"
             onClick={toggleColorMode}
             fontSize={['1.2rem', '1rem']}
-            color="rgb(230,190,30)"
+            color="#f6ad55"
             icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
             aria-label="Select color mode"
+            cursor="pointer"
           />
         </ListItem>
         <ListItem display={['none', 'block']}>About</ListItem>

@@ -4,10 +4,6 @@ import Layout from '../components/layout';
 
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({
-  config: {
-    useSystemColorMode: true,
-    // initialColorMode: "light",
-  },
   fonts: {
     body: "'Zilla Slab', serif",
     heading: "'Zilla Slab', serif",

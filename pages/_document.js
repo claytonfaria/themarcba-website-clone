@@ -1,3 +1,4 @@
+import { ColorModeScript } from '@chakra-ui/core';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
@@ -16,6 +17,7 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <ColorModeScript initialColorMode="system" />
           <Main />
           <NextScript />
         </body>
