@@ -24,7 +24,7 @@ export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const menuTextColor = useColorModeValue('#777777', '#FFFFFF');
   const highlightTextColor = useColorModeValue('#6c63ff', '#00c58e');
-  const primaryTextColor = useColorModeValue('#777777', '#A4A7C1');
+  const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
   return (
     <Flex
       maxW="100%"
@@ -79,7 +79,7 @@ export default function Header() {
             as="a"
             variant="ghost"
             onClick={toggleColorMode}
-            fontSize={['1.4rem', '1rem']}
+            fontSize={['1.4rem', '1.2rem']}
             color="#f6ad55"
             icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
             aria-label="Select color mode"
