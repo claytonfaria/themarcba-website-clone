@@ -1,5 +1,4 @@
 import {
-  Box,
   Image,
   Link,
   ListItem,
@@ -24,12 +23,12 @@ import { FiFeather } from 'react-icons/fi';
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const menuTextColor = useColorModeValue('#777777', '#FFFFFF');
-  const highlightTextColor = useColorModeValue('#5c61ff', '#00c58e');
+  const highlightTextColor = useColorModeValue('#6c63ff', '#00c58e');
   const primaryTextColor = useColorModeValue('#777777', '#A4A7C1');
   return (
     <Flex
       maxW="100%"
-      paddingY={[3, 6]}
+      paddingY={[2, 6]}
       px={[4, 5]}
       marginX="auto"
       justifyContent="space-between"
@@ -37,15 +36,18 @@ export default function Header() {
       <UnorderedList listStyleType="none" marginLeft="6px">
         <ListItem>
           <Link display="flex" alignItems="center">
-            <Box
-              maxH="36px"
-              maxW="36px"
-              width="2.5rem"
+            <Image
+              boxSize="38px"
+              src="/profile.webp"
+              fallbackSrc="/profile.webp"
+              objectFit="contain"
+              alt="profile picture"
               overflow="hidden"
               marginRight=".5rem"
-            >
-              <Image src="profile.jpeg" />
-            </Box>
+              border="2px"
+              borderRadius="100%"
+              borderColor={highlightTextColor}
+            />
             <Text
               fontSize="1.4rem"
               fontWeight="700"
@@ -59,6 +61,7 @@ export default function Header() {
       </UnorderedList>
 
       <HStack
+        as="ul"
         listStyleType="none"
         display="flex"
         justifyContent="space-between"
@@ -67,6 +70,7 @@ export default function Header() {
         textColor={menuTextColor}
         fontSize="1.2rem"
         spacing={4}
+        cursor="pointer"
       >
         <ListItem>
           <IconButton
@@ -75,7 +79,7 @@ export default function Header() {
             as="a"
             variant="ghost"
             onClick={toggleColorMode}
-            fontSize={['1.2rem', '1rem']}
+            fontSize={['1.4rem', '1rem']}
             color="#f6ad55"
             icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
             aria-label="Select color mode"
@@ -86,7 +90,8 @@ export default function Header() {
         <ListItem display={['none', 'block']}>Projects</ListItem>
         <ListItem display={['none', 'block']}>Blog</ListItem>
         <Button
-          display={['none', 'block']}
+          as="li"
+          display={['none', 'flex']}
           variant="outline"
           borderRadius="10px"
           border="2px"
@@ -108,9 +113,10 @@ export default function Header() {
         height="5rem"
         justifyContent="space-evenly"
         alignItems="center"
-        background={colorMode === 'dark' && '#0d1131'}
+        background={colorMode === 'dark' ? '#0d1131' : 'white'}
         color={primaryTextColor}
         display={['flex', 'none']}
+        zIndex={1000}
       >
         <Link
           fontWeight="700"
@@ -119,6 +125,7 @@ export default function Header() {
           display="flex"
           flexDirection="column"
           _hover={{ textDecoration: 'none' }}
+          color={highlightTextColor}
         >
           <AiOutlineHome />
           <Text>Home</Text>
