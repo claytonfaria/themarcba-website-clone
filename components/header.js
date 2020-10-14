@@ -11,19 +11,14 @@ import {
   IconButton,
   useColorModeValue,
 } from '@chakra-ui/core';
-import {
-  AiOutlineHome,
-  AiOutlineInfoCircle,
-  AiOutlineProject,
-  AiOutlineMail,
-} from 'react-icons/ai';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import { FiFeather } from 'react-icons/fi';
+
+import BottomNavigation from './bottomNavigation';
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const menuTextColor = useColorModeValue('#777777', '#FFFFFF');
-  const highlightTextColor = useColorModeValue('#6c63ff', '#00c58e');
+  const highlightColor = useColorModeValue('#6c63ff', '#00c58e');
   const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
   return (
     <Flex
@@ -46,12 +41,12 @@ export default function Header() {
               marginRight=".5rem"
               border="2px"
               borderRadius="100%"
-              borderColor={highlightTextColor}
+              borderColor={highlightColor}
             />
             <Text
               fontSize="1.4rem"
               fontWeight="700"
-              color={highlightTextColor}
+              color={highlightColor}
               flexWrap="nowrap"
             >
               Clayton Faria
@@ -95,86 +90,19 @@ export default function Header() {
           variant="outline"
           borderRadius="10px"
           border="2px"
-          borderColor={highlightTextColor}
-          color={highlightTextColor}
+          borderColor={highlightColor}
+          color={highlightColor}
           fontSize="1.1rem"
           fontWeight="700"
         >
           Get in Touch
         </Button>
       </HStack>
-
-      <HStack
-        width="100%"
-        boxShadow="0 -10px 10px rgba(0,0,0,.2)"
-        left="0"
-        bottom="0"
-        position="fixed"
-        height="5rem"
-        justifyContent="space-evenly"
-        alignItems="center"
-        background={colorMode === 'dark' ? '#0d1131' : 'white'}
-        color={primaryTextColor}
-        display={['flex', 'none']}
-        zIndex={1000}
-      >
-        <Link
-          fontWeight="700"
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
-          _hover={{ textDecoration: 'none' }}
-          color={highlightTextColor}
-        >
-          <AiOutlineHome />
-          <Text>Home</Text>
-        </Link>
-        <Link
-          fontWeight="700"
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
-          _hover={{ textDecoration: 'none' }}
-        >
-          <AiOutlineInfoCircle />
-          <Text>About</Text>
-        </Link>
-        <Link
-          fontWeight="700"
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
-          _hover={{ textDecoration: 'none' }}
-        >
-          <AiOutlineProject />
-          <Text>Projects</Text>
-        </Link>
-        <Link
-          fontWeight="700"
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
-          _hover={{ textDecoration: 'none' }}
-        >
-          <FiFeather />
-          <Text>Blog</Text>
-        </Link>
-        <Link
-          fontWeight="700"
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
-          _hover={{ textDecoration: 'none' }}
-        >
-          <AiOutlineMail />
-          <Text>Contact</Text>
-        </Link>
-      </HStack>
+      <BottomNavigation
+        colorMode={colorMode}
+        primaryTextColor={primaryTextColor}
+        highlightColor={highlightColor}
+      />
     </Flex>
   );
 }
