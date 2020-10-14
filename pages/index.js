@@ -18,11 +18,36 @@ import { FiFeather } from 'react-icons/fi';
 import HeroSVG from '../components/SVGs/heroSVG';
 import styles from '../styles/home.module.css';
 
+import { motion } from 'framer-motion';
+
 export default function Home() {
   const highlightColor = useColorModeValue('#3c31e8', '#00c58e');
   const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
   const cardBgColor = useColorModeValue('white', '#0d1131');
   const tagBgColor = useColorModeValue('white', 'black');
+
+  const MotionBox = motion.custom(Box);
+  const MotionFlex = motion.custom(Flex);
+  const MotionImage = motion.custom(Image);
+
+  const imageMotion = {
+    hover: {
+      y: -20,
+    },
+    tap: {
+      y: -20,
+    },
+  };
+
+  const boxMotion = {
+    hover: {
+      scale: 1.05,
+    },
+    tap: {
+      scale: 1.05,
+    },
+  };
+
   return (
     <Box width="100%" marginTop="1.5rem">
       <Head>
@@ -100,22 +125,26 @@ export default function Home() {
         alignItems="center"
         flexWrap="wrap"
       >
-        <Flex
+        <MotionFlex
           margin="1rem"
           justifyContent="center"
           maxW="20.5rem"
           marginX="1rem"
           alignItems="center"
           direction="column"
+          whileHover="hover"
+          whileTap="tap"
         >
-          <Image
+          <MotionImage
             src="/image1.png"
             height="auto"
             width="100%"
             borderRadius=".5rem"
             alt="post image"
+            variants={imageMotion}
+            pointerEvents="none"
           />
-          <Box
+          <MotionBox
             zIndex="10"
             maxWidth="91%"
             height="100%"
@@ -129,6 +158,7 @@ export default function Home() {
             display="flex"
             flexDirection="column"
             justifyContent="center"
+            variants={boxMotion}
           >
             <Flex wrap="wrap">
               <Text
@@ -161,7 +191,9 @@ export default function Home() {
               textColor={primaryTextColor}
             >
               In this post, we take a look a how we can use cronjobs to schedule
-              tasks in Node.js
+              tasks in Node.js Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Repellendus totam eum saepe earum officia fugit
+              eveniet tempore modi error nobis.
             </Text>
             <Flex
               alignItems="center"
@@ -193,8 +225,8 @@ export default function Home() {
                 </Link>
               </ButtonGroup>
             </Flex>
-          </Box>
-        </Flex>
+          </MotionBox>
+        </MotionFlex>
       </Flex>
     </Box>
   );
