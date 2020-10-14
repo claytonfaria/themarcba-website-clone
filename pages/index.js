@@ -59,6 +59,7 @@ export default function Home() {
         fontSize="31px"
         lineHeight="1.5"
         fontWeight={['600', '630']}
+        // fontFamily="Zilla Slab"
       >
         Hello, I'm Clayton{' '}
         <Box as="span" className={styles.wave}>
@@ -191,9 +192,7 @@ export default function Home() {
               textColor={primaryTextColor}
             >
               In this post, we take a look a how we can use cronjobs to schedule
-              tasks in Node.js Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Repellendus totam eum saepe earum officia fugit
-              eveniet tempore modi error nobis.
+              tasks in Node.js
             </Text>
             <Flex
               alignItems="center"
