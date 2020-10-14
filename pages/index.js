@@ -5,6 +5,13 @@ import {
   useColorModeValue,
   Text,
   Divider,
+  Image,
+  Flex,
+  HStack,
+  Button,
+  Spacer,
+  ButtonGroup,
+  Link,
 } from '@chakra-ui/core';
 import Head from 'next/head';
 import { FaHeart } from 'react-icons/fa';
@@ -14,8 +21,10 @@ import HeroSVG from '../components/SVGs/heroSVG';
 import styles from '../styles/home.module.css';
 
 export default function Home() {
-  const highlightColor = useColorModeValue('#6c63ff', '#00c58e');
+  const highlightColor = useColorModeValue('#3c31e8', '#00c58e');
   const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
+  const cardBgColor = useColorModeValue('white', '#0d1131');
+  const tagBgColor = useColorModeValue('white', 'black');
   return (
     <Box width="100%" marginTop="1.5rem">
       <Head>
@@ -86,6 +95,152 @@ export default function Home() {
       >
         Here are my most important projects:
       </Text>
+
+      <Flex
+        direction={['column', 'row']}
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Flex
+          margin="1rem"
+          justifyContent="center"
+          maxW="20.5rem"
+          marginX="1rem"
+          alignItems="center"
+          direction="column"
+        >
+          <Image
+            src="/image1.png"
+            height="auto"
+            width="100%"
+            borderRadius=".5rem"
+            alt="post image"
+          />
+          <Box
+            zIndex="10"
+            maxWidth="91%"
+            height="100%"
+            padding="1.25rem"
+            paddingBottom="1.5rem"
+            overflow="hidden"
+            marginTop="-2.5rem"
+            borderRadius=".5rem"
+            background={cardBgColor}
+            boxShadow="0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05)"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+          >
+            <Flex wrap="wrap">
+              <Text
+                paddingX=".5rem"
+                paddingY="0"
+                marginRight=".5rem"
+                marginBottom=".25rem"
+                fontSize="1rem"
+                fontWeight="550"
+                borderRadius="9999px"
+                backgroundColor={tagBgColor}
+                textColor={primaryTextColor}
+              >
+                Next.js
+              </Text>
+              <Text
+                paddingX=".5rem"
+                paddingY="0"
+                marginRight=".5rem"
+                marginBottom=".25rem"
+                fontSize="1rem"
+                fontWeight="550"
+                borderRadius="9999px"
+                backgroundColor={tagBgColor}
+                textColor={primaryTextColor}
+              >
+                React.js
+              </Text>
+              <Text
+                paddingX=".5rem"
+                paddingY="0"
+                marginRight=".5rem"
+                marginBottom=".25rem"
+                fontSize="1rem"
+                fontWeight="550"
+                borderRadius="9999px"
+                backgroundColor={tagBgColor}
+                textColor={primaryTextColor}
+              >
+                JavaScript
+              </Text>
+            </Flex>
+            <Heading fontSize="1.4rem" marginTop=".5rem" lineHeight="1.5">
+              MarketNews
+            </Heading>
+            <Text
+              fontSize=".8rem"
+              marginBottom=".75rem"
+              textColor={primaryTextColor}
+            >
+              July 9, 2020
+            </Text>
+            <Text
+              fontSize="1rem"
+              textAlign="justify"
+              textColor={primaryTextColor}
+            >
+              In this post, we take a look a how we can use cronjobs to schedule
+              tasks in Node.js
+            </Text>
+            <Flex
+              alignItems="center"
+              justifyContent="center"
+              marginTop="0.8rem"
+            >
+              <ButtonGroup spacing={3}>
+                <Link href="https://github.com/vercel/next.js" isExternal>
+                  <Button
+                    width="7rem"
+                    variant="outline"
+                    borderColor={highlightColor}
+                    color={highlightColor}
+                    fontWeight="700"
+                  >
+                    Live
+                  </Button>
+                </Link>
+                <Link href="https://github.com/vercel/next.js" isExternal>
+                  <Button
+                    width="7rem"
+                    variant="outline"
+                    borderColor={highlightColor}
+                    color={highlightColor}
+                    fontWeight="700"
+                  >
+                    GitHub
+                  </Button>
+                </Link>
+              </ButtonGroup>
+            </Flex>
+          </Box>
+        </Flex>
+      </Flex>
+      <style jsx>
+        {`
+          .transform {
+            --transform-translate-x: 0;
+            --transform-translate-y: 0;
+            --transform-rotate: 0;
+            --transform-skew-x: 0;
+            --transform-skew-y: 0;
+            --transform-scale-x: 1;
+            --transform-scale-y: 1;
+            transform: translateX(var(--transform-translate-x))
+              translateY(var(--transform-translate-y))
+              rotate(var(--transform-rotate)) skewX(var(--transform-skew-x))
+              skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x))
+              scaleY(var(--transform-scale-y));
+          }
+        `}
+      </style>
     </Box>
   );
 }

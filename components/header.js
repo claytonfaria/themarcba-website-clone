@@ -18,7 +18,7 @@ import BottomNavigation from './bottomNavigation';
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const menuTextColor = useColorModeValue('#777777', '#FFFFFF');
-  const highlightColor = useColorModeValue('#6c63ff', '#00c58e');
+  const highlightColor = useColorModeValue('#3c31e8', '#00c58e');
   const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
   return (
     <Flex
