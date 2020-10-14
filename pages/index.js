@@ -7,9 +7,7 @@ import {
   Divider,
   Image,
   Flex,
-  HStack,
   Button,
-  Spacer,
   ButtonGroup,
   Link,
 } from '@chakra-ui/core';
@@ -100,6 +98,7 @@ export default function Home() {
         direction={['column', 'row']}
         justifyContent="center"
         alignItems="center"
+        flexWrap="wrap"
       >
         <Flex
           margin="1rem"
@@ -144,32 +143,6 @@ export default function Home() {
                 textColor={primaryTextColor}
               >
                 Next.js
-              </Text>
-              <Text
-                paddingX=".5rem"
-                paddingY="0"
-                marginRight=".5rem"
-                marginBottom=".25rem"
-                fontSize="1rem"
-                fontWeight="550"
-                borderRadius="9999px"
-                backgroundColor={tagBgColor}
-                textColor={primaryTextColor}
-              >
-                React.js
-              </Text>
-              <Text
-                paddingX=".5rem"
-                paddingY="0"
-                marginRight=".5rem"
-                marginBottom=".25rem"
-                fontSize="1rem"
-                fontWeight="550"
-                borderRadius="9999px"
-                backgroundColor={tagBgColor}
-                textColor={primaryTextColor}
-              >
-                JavaScript
               </Text>
             </Flex>
             <Heading fontSize="1.4rem" marginTop=".5rem" lineHeight="1.5">
@@ -223,24 +196,6 @@ export default function Home() {
           </Box>
         </Flex>
       </Flex>
-      <style jsx>
-        {`
-          .transform {
-            --transform-translate-x: 0;
-            --transform-translate-y: 0;
-            --transform-rotate: 0;
-            --transform-skew-x: 0;
-            --transform-skew-y: 0;
-            --transform-scale-x: 1;
-            --transform-scale-y: 1;
-            transform: translateX(var(--transform-translate-x))
-              translateY(var(--transform-translate-y))
-              rotate(var(--transform-rotate)) skewX(var(--transform-skew-x))
-              skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x))
-              scaleY(var(--transform-scale-y));
-          }
-        `}
-      </style>
     </Box>
   );
 }

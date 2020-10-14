@@ -17,7 +17,7 @@ import {
 
 export default function Footer() {
   const { colorMode } = useColorMode();
-  const primaryTextColor = useColorModeValue('#777777', '#A4A7C1');
+  const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
   return (
     <Box
       width="100%"
