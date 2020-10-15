@@ -1,4 +1,6 @@
 import { Link, Text, HStack } from '@chakra-ui/core';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import {
   AiOutlineHome,
   AiOutlineInfoCircle,
@@ -7,11 +9,10 @@ import {
 } from 'react-icons/ai';
 import { FiFeather } from 'react-icons/fi';
 
-export default function BottomNavigation({
-  primaryTextColor,
-  highlightColor,
-  colorMode,
-}) {
+export default function BottomNavigation({ colorScheme }) {
+  const { primaryTextColor, highlightColor, colorMode } = colorScheme;
+
+  const router = useRouter();
   return (
     <HStack
       width="100%"
@@ -27,62 +28,76 @@ export default function BottomNavigation({
       display={['flex', 'none']}
       zIndex={1000}
     >
-      <Link
-        fontWeight="700"
-        justifyContent="center"
-        alignItems="center"
-        display="flex"
-        flexDirection="column"
-        _hover={{ textDecoration: 'none' }}
-        color={highlightColor}
-      >
-        <AiOutlineHome />
-        <Text>Home</Text>
-      </Link>
-      <Link
-        fontWeight="700"
-        justifyContent="center"
-        alignItems="center"
-        display="flex"
-        flexDirection="column"
-        _hover={{ textDecoration: 'none' }}
-      >
-        <AiOutlineInfoCircle />
-        <Text>About</Text>
-      </Link>
-      <Link
-        fontWeight="700"
-        justifyContent="center"
-        alignItems="center"
-        display="flex"
-        flexDirection="column"
-        _hover={{ textDecoration: 'none' }}
-      >
-        <AiOutlineProject />
-        <Text>Projects</Text>
-      </Link>
-      <Link
-        fontWeight="700"
-        justifyContent="center"
-        alignItems="center"
-        display="flex"
-        flexDirection="column"
-        _hover={{ textDecoration: 'none' }}
-      >
-        <FiFeather />
-        <Text>Blog</Text>
-      </Link>
-      <Link
-        fontWeight="700"
-        justifyContent="center"
-        alignItems="center"
-        display="flex"
-        flexDirection="column"
-        _hover={{ textDecoration: 'none' }}
-      >
-        <AiOutlineMail />
-        <Text>Contact</Text>
-      </Link>
+      <NextLink href="/">
+        <Link
+          fontWeight="700"
+          justifyContent="center"
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+          _hover={{ textDecoration: 'none' }}
+          color={router.pathname === '/' && highlightColor}
+        >
+          <AiOutlineHome />
+          <Text>Home</Text>
+        </Link>
+      </NextLink>
+      <NextLink href="/about">
+        <Link
+          fontWeight="700"
+          justifyContent="center"
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+          _hover={{ textDecoration: 'none' }}
+          color={router.pathname === '/about' && highlightColor}
+        >
+          <AiOutlineInfoCircle />
+          <Text>About</Text>
+        </Link>
+      </NextLink>
+      <NextLink href="/projects">
+        <Link
+          fontWeight="700"
+          justifyContent="center"
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+          _hover={{ textDecoration: 'none' }}
+          color={router.pathname === '/projects' && highlightColor}
+        >
+          <AiOutlineProject />
+          <Text>Projects</Text>
+        </Link>
+      </NextLink>
+      <NextLink href="/blog">
+        <Link
+          fontWeight="700"
+          justifyContent="center"
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+          _hover={{ textDecoration: 'none' }}
+          color={router.pathname === '/blog' && highlightColor}
+        >
+          <FiFeather />
+          <Text>Blog</Text>
+        </Link>
+      </NextLink>
+      <NextLink href="/contact">
+        <Link
+          fontWeight="700"
+          justifyContent="center"
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+          _hover={{ textDecoration: 'none' }}
+          color={router.pathname === '/contact' && highlightColor}
+        >
+          <AiOutlineMail />
+          <Text>Contact</Text>
+        </Link>
+      </NextLink>
     </HStack>
   );
 }

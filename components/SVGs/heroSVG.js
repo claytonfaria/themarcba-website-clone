@@ -4,7 +4,7 @@ export default function HeroSVG({ color, marginTop }) {
   return (
     <Container maxWidth="100%" textAlign="center" padding="0" margin="0">
       <Icon
-        maxWidth={['100', '75%']}
+        maxWidth={['100%', '75%']}
         marginTop={marginTop}
         id="ade8c9af-7e2e-4eda-b5c8-b06129257226"
         data-name="Layer 1"

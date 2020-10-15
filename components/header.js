@@ -9,6 +9,8 @@ import {
   Button,
   IconButton,
 } from '@chakra-ui/core';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 import BottomNavigation from './bottomNavigation';
@@ -19,8 +21,8 @@ export default function Header({ colorScheme }) {
     toggleColorMode,
     menuTextColor,
     highlightColor,
-    primaryTextColor,
   } = colorScheme;
+  const router = useRouter();
 
   return (
     <Flex
@@ -32,32 +34,34 @@ export default function Header({ colorScheme }) {
     >
       <UnorderedList listStyleType="none" marginLeft="6px">
         <ListItem>
-          <Link
-            display="flex"
-            alignItems="center"
-            _hover={{ textDecoration: 'none' }}
-          >
-            <Image
-              boxSize="38px"
-              src="/profile.webp"
-              fallbackSrc="/profile.webp"
-              objectFit="contain"
-              alt="profile picture"
-              overflow="hidden"
-              marginRight=".5rem"
-              border="2px"
-              rounded="full"
-              borderColor={highlightColor}
-            />
-            <Text
-              fontSize="1.4rem"
-              fontWeight="700"
-              color={highlightColor}
-              flexWrap="nowrap"
+          <NextLink href="/">
+            <Link
+              display="flex"
+              alignItems="center"
+              _hover={{ textDecoration: 'none' }}
             >
-              Clayton Faria
-            </Text>
-          </Link>
+              <Image
+                boxSize="38px"
+                src="/profile.webp"
+                fallbackSrc="/profile.webp"
+                objectFit="contain"
+                alt="profile picture"
+                overflow="hidden"
+                marginRight=".5rem"
+                border="2px"
+                rounded="full"
+                borderColor={highlightColor}
+              />
+              <Text
+                fontSize="1.4rem"
+                fontWeight="700"
+                color={highlightColor}
+                flexWrap="nowrap"
+              >
+                Clayton Faria
+              </Text>
+            </Link>
+          </NextLink>
         </ListItem>
       </UnorderedList>
 
@@ -88,20 +92,37 @@ export default function Header({ colorScheme }) {
           />
         </ListItem>
         <ListItem display={['none', 'block']}>
-          <Link textDecoration="none" _hover={{ borderBottom: '2px' }}>
-            About
-          </Link>
+          <NextLink href="/about">
+            <Link
+              textDecoration="none"
+              _hover={{ borderBottom: '2px' }}
+              color={router.pathname === '/about' && highlightColor}
+            >
+              About
+            </Link>
+          </NextLink>
         </ListItem>
         <ListItem display={['none', 'block']}>
-          {' '}
-          <Link textDecoration="none" _hover={{ borderBottom: '2px' }}>
-            Projects
-          </Link>
+          <NextLink href="/projects">
+            <Link
+              textDecoration="none"
+              _hover={{ borderBottom: '2px' }}
+              color={router.pathname === '/projects' && highlightColor}
+            >
+              Projects
+            </Link>
+          </NextLink>
         </ListItem>
         <ListItem display={['none', 'block']}>
-          <Link textDecoration="none" _hover={{ borderBottom: '2px' }}>
-            Blog
-          </Link>
+          <NextLink href="/blog">
+            <Link
+              textDecoration="none"
+              _hover={{ borderBottom: '2px' }}
+              color={router.pathname === '/blog' && highlightColor}
+            >
+              Blog
+            </Link>
+          </NextLink>
         </ListItem>
         <Button
           as="li"
@@ -122,14 +143,10 @@ export default function Header({ colorScheme }) {
             color: colorMode === 'dark' ? 'black' : 'white',
           }}
         >
-          Get in touch
+          <NextLink href="/contact">Get in touch</NextLink>
         </Button>
       </HStack>
-      <BottomNavigation
-        colorMode={colorMode}
-        primaryTextColor={primaryTextColor}
-        highlightColor={highlightColor}
-      />
+      <BottomNavigation colorScheme={colorScheme} />
     </Flex>
   );
 }

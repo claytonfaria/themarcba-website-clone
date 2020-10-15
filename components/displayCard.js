@@ -108,8 +108,8 @@ export default function DisplayCard({ colorScheme, item }) {
         <Text fontSize="1rem" textAlign="justify" textColor={primaryTextColor}>
           {description}
         </Text>
-        <Flex alignItems="center" justifyContent="center" marginTop="0.8rem">
-          <ButtonGroup spacing={3}>
+        <Flex alignItems="center" justifyContent="center" marginTop="1.5rem">
+          <ButtonGroup spacing={4}>
             <Link
               href="https://github.com/vercel/next.js"
               isExternal
@@ -118,7 +118,7 @@ export default function DisplayCard({ colorScheme, item }) {
               }}
             >
               <Button
-                width="7rem"
+                width={['7rem', '7rem', '7rem', '8.3rem']}
                 variant="outline"
                 borderColor={highlightColor}
                 color={highlightColor}
@@ -143,7 +143,7 @@ export default function DisplayCard({ colorScheme, item }) {
               }}
             >
               <Button
-                width="7rem"
+                width={['7rem', '7rem', '7rem', '8.3rem']}
                 variant="outline"
                 borderColor={highlightColor}
                 color={highlightColor}
