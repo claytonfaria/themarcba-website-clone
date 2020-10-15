@@ -7,19 +7,19 @@ import {
   Text,
   HStack,
   Button,
-  useColorMode,
   IconButton,
-  useColorModeValue,
 } from '@chakra-ui/core';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 import BottomNavigation from './bottomNavigation';
 
-export default function Header() {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const menuTextColor = useColorModeValue('#777777', '#FFFFFF');
-  const highlightColor = useColorModeValue('#3c31e8', '#00c58e');
-  const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
+export default function Header({
+  colorMode,
+  toggleColorMode,
+  menuTextColor,
+  highlightColor,
+  primaryTextColor,
+}) {
   return (
     <Flex
       maxW="100%"

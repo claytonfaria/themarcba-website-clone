@@ -1,13 +1,4 @@
-import {
-  Text,
-  useColorMode,
-  useColorModeValue,
-  Flex,
-  Box,
-  IconButton,
-  Icon,
-  Link,
-} from '@chakra-ui/core';
+import { Text, Flex, Box, IconButton, Icon, Link } from '@chakra-ui/core';
 import {
   FaGithub,
   FaTwitter,
@@ -16,10 +7,15 @@ import {
   FaHeart,
 } from 'react-icons/fa';
 
-export default function Footer() {
-  const { colorMode } = useColorMode();
-  const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
-  const highlightColor = useColorModeValue('#3c31e8', '#00c58e');
+export default function Footer({
+  colorMode,
+  primaryTextColor,
+  highlightColor,
+}) {
+  const buttonHoverEffect = {
+    color: highlightColor,
+    transform: 'translateY(-4px)',
+  };
 
   return (
     <Box
@@ -47,14 +43,8 @@ export default function Footer() {
               variant="ghost"
               icon={<FaTwitter />}
               cursor="pointer"
-              _hover={{
-                color: highlightColor,
-                transform: 'translateY(-4px)',
-              }}
-              _active={{
-                color: highlightColor,
-                transform: 'translateY(-4px)',
-              }}
+              _hover={buttonHoverEffect}
+              _active={buttonHoverEffect}
             />
           </Link>
 
@@ -64,14 +54,8 @@ export default function Footer() {
               variant="ghost"
               icon={<FaGithub />}
               cursor="pointer"
-              _hover={{
-                color: highlightColor,
-                transform: 'translateY(-4px)',
-              }}
-              _active={{
-                color: highlightColor,
-                transform: 'translateY(-4px)',
-              }}
+              _hover={buttonHoverEffect}
+              _active={buttonHoverEffect}
             />
           </Link>
           <Link isExternal href="https://linkedin.com/in/claytonfaria">
@@ -80,14 +64,8 @@ export default function Footer() {
               variant="ghost"
               icon={<FaLinkedin />}
               cursor="pointer"
-              _hover={{
-                color: highlightColor,
-                transform: 'translateY(-4px)',
-              }}
-              _active={{
-                color: highlightColor,
-                transform: 'translateY(-4px)',
-              }}
+              _hover={buttonHoverEffect}
+              _active={buttonHoverEffect}
             />
           </Link>
         </Flex>

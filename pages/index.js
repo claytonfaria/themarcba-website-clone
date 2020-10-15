@@ -20,9 +20,7 @@ import { FiFeather } from 'react-icons/fi';
 import HeroSVG from '../components/SVGs/heroSVG';
 import styles from '../styles/home.module.css';
 
-export default function Home() {
-  const highlightColor = useColorModeValue('#3c31e8', '#00c58e');
-  const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
+export default function Home({ highlightColor, primaryTextColor }) {
   const cardBgColor = useColorModeValue('white', '#0d1131');
   const tagBgColor = useColorModeValue('white', 'black');
 
