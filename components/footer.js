@@ -6,6 +6,7 @@ import {
   Box,
   IconButton,
   Icon,
+  Link,
 } from '@chakra-ui/core';
 import {
   FaGithub,
@@ -18,12 +19,14 @@ import {
 export default function Footer() {
   const { colorMode } = useColorMode();
   const primaryTextColor = useColorModeValue('#737171', '#A4A7C1');
+  const highlightColor = useColorModeValue('#3c31e8', '#00c58e');
+
   return (
     <Box
       width="100%"
       boxShadow="0 -10px 10px rgba(0,0,0,.2)"
       position="relative"
-      marginTop="3rem"
+      marginTop="2.5rem"
       padding="1.25rem"
       background={colorMode === 'dark' && '#0d1131'}
       color={primaryTextColor}
@@ -38,24 +41,55 @@ export default function Footer() {
           by Clayton Faria &copy; 2020
         </Text>
         <Flex>
-          <IconButton
-            as="a"
-            fontSize="1.4rem"
-            variant="ghost"
-            icon={<FaTwitter />}
-          />
-          <IconButton
-            as="a"
-            fontSize="1.4rem"
-            variant="ghost"
-            icon={<FaGithub />}
-          />
-          <IconButton
-            as="a"
-            fontSize="1.4rem"
-            variant="ghost"
-            icon={<FaLinkedin />}
-          />
+          <Link isExternal href="https://twitter.com/fariaclayton">
+            <IconButton
+              fontSize="1.4rem"
+              variant="ghost"
+              icon={<FaTwitter />}
+              cursor="pointer"
+              _hover={{
+                color: highlightColor,
+                transform: 'translateY(-4px)',
+              }}
+              _active={{
+                color: highlightColor,
+                transform: 'translateY(-4px)',
+              }}
+            />
+          </Link>
+
+          <Link isExternal href="https://github.com/claytonfaria">
+            <IconButton
+              fontSize="1.4rem"
+              variant="ghost"
+              icon={<FaGithub />}
+              cursor="pointer"
+              _hover={{
+                color: highlightColor,
+                transform: 'translateY(-4px)',
+              }}
+              _active={{
+                color: highlightColor,
+                transform: 'translateY(-4px)',
+              }}
+            />
+          </Link>
+          <Link isExternal href="https://linkedin.com/in/claytonfaria">
+            <IconButton
+              fontSize="1.4rem"
+              variant="ghost"
+              icon={<FaLinkedin />}
+              cursor="pointer"
+              _hover={{
+                color: highlightColor,
+                transform: 'translateY(-4px)',
+              }}
+              _active={{
+                color: highlightColor,
+                transform: 'translateY(-4px)',
+              }}
+            />
+          </Link>
         </Flex>
       </Flex>
     </Box>

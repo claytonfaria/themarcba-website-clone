@@ -10,15 +10,15 @@ import {
   Button,
   ButtonGroup,
   Link,
+  colorMode,
 } from '@chakra-ui/core';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { FaHeart } from 'react-icons/fa';
 import { FiFeather } from 'react-icons/fi';
 
 import HeroSVG from '../components/SVGs/heroSVG';
 import styles from '../styles/home.module.css';
-
-import { motion } from 'framer-motion';
 
 export default function Home() {
   const highlightColor = useColorModeValue('#3c31e8', '#00c58e');
@@ -129,7 +129,7 @@ export default function Home() {
         <MotionFlex
           margin="1rem"
           justifyContent="center"
-          maxW="20.5rem"
+          maxW={['20.5rem', '20.5rem', '20.5rem', '24rem']}
           marginX="1rem"
           alignItems="center"
           direction="column"
@@ -200,24 +200,52 @@ export default function Home() {
               marginTop="0.8rem"
             >
               <ButtonGroup spacing={3}>
-                <Link href="https://github.com/vercel/next.js" isExternal>
+                <Link
+                  href="https://github.com/vercel/next.js"
+                  isExternal
+                  _hover={{
+                    textDecoration: 'none',
+                  }}
+                >
                   <Button
                     width="7rem"
                     variant="outline"
                     borderColor={highlightColor}
                     color={highlightColor}
                     fontWeight="700"
+                    _hover={{
+                      bg: highlightColor,
+                      color: colorMode === 'dark' ? 'black' : 'white',
+                    }}
+                    _active={{
+                      bg: highlightColor,
+                      color: colorMode === 'dark' ? 'black' : 'white',
+                    }}
                   >
                     Live
                   </Button>
                 </Link>
-                <Link href="https://github.com/vercel/next.js" isExternal>
+                <Link
+                  href="https://github.com/vercel/next.js"
+                  isExternal
+                  _hover={{
+                    textDecoration: 'none',
+                  }}
+                >
                   <Button
                     width="7rem"
                     variant="outline"
                     borderColor={highlightColor}
                     color={highlightColor}
                     fontWeight="700"
+                    _hover={{
+                      bg: highlightColor,
+                      color: colorMode === 'dark' ? 'black' : 'white',
+                    }}
+                    _active={{
+                      bg: highlightColor,
+                      color: colorMode === 'dark' ? 'black' : 'white',
+                    }}
                   >
                     GitHub
                   </Button>

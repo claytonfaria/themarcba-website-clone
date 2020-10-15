@@ -30,7 +30,11 @@ export default function Header() {
     >
       <UnorderedList listStyleType="none" marginLeft="6px">
         <ListItem>
-          <Link display="flex" alignItems="center">
+          <Link
+            display="flex"
+            alignItems="center"
+            _hover={{ textDecoration: 'none' }}
+          >
             <Image
               boxSize="38px"
               src="/profile.webp"
@@ -40,7 +44,7 @@ export default function Header() {
               overflow="hidden"
               marginRight=".5rem"
               border="2px"
-              borderRadius="100%"
+              rounded="full"
               borderColor={highlightColor}
             />
             <Text
@@ -81,9 +85,22 @@ export default function Header() {
             cursor="pointer"
           />
         </ListItem>
-        <ListItem display={['none', 'block']}>About</ListItem>
-        <ListItem display={['none', 'block']}>Projects</ListItem>
-        <ListItem display={['none', 'block']}>Blog</ListItem>
+        <ListItem display={['none', 'block']}>
+          <Link textDecoration="none" _hover={{ borderBottom: '2px' }}>
+            About
+          </Link>
+        </ListItem>
+        <ListItem display={['none', 'block']}>
+          {' '}
+          <Link textDecoration="none" _hover={{ borderBottom: '2px' }}>
+            Projects
+          </Link>
+        </ListItem>
+        <ListItem display={['none', 'block']}>
+          <Link textDecoration="none" _hover={{ borderBottom: '2px' }}>
+            Blog
+          </Link>
+        </ListItem>
         <Button
           as="li"
           display={['none', 'flex']}
@@ -94,8 +111,16 @@ export default function Header() {
           color={highlightColor}
           fontSize="1.1rem"
           fontWeight="700"
+          _hover={{
+            bg: highlightColor,
+            color: colorMode === 'dark' ? 'black' : 'white',
+          }}
+          _active={{
+            bg: highlightColor,
+            color: colorMode === 'dark' ? 'black' : 'white',
+          }}
         >
-          Get in Touch
+          Get in touch
         </Button>
       </HStack>
       <BottomNavigation

@@ -8,9 +8,9 @@ export default function Layout({ children }) {
     <>
       <Header />
       <Container
-        maxWidth="768px"
+        maxWidth={['768px', '768px', '768px', '1024px']}
         minHeight="100vh"
-        marginBottom="6rem"
+        marginBottom={['6rem', '0']}
         paddingX={[4, 5]}
       >
         {children}
