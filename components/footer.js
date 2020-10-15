@@ -7,11 +7,9 @@ import {
   FaHeart,
 } from 'react-icons/fa';
 
-export default function Footer({
-  colorMode,
-  primaryTextColor,
-  highlightColor,
-}) {
+export default function Footer({ colorScheme }) {
+  const { colorMode, primaryTextColor, highlightColor } = colorScheme;
+
   const buttonHoverEffect = {
     color: highlightColor,
     transform: 'translateY(-4px)',
@@ -37,37 +35,43 @@ export default function Footer({
           by Clayton Faria &copy; 2020
         </Text>
         <Flex>
-          <Link isExternal href="https://twitter.com/fariaclayton">
-            <IconButton
-              fontSize="1.4rem"
-              variant="ghost"
-              icon={<FaTwitter />}
-              cursor="pointer"
-              _hover={buttonHoverEffect}
-              _active={buttonHoverEffect}
-            />
-          </Link>
+          <IconButton
+            isExternal
+            href="https://twitter.com/fariaclayton"
+            as={Link}
+            aria-label="twitter"
+            fontSize="1.4rem"
+            variant="ghost"
+            icon={<FaTwitter />}
+            cursor="pointer"
+            _hover={buttonHoverEffect}
+            _active={buttonHoverEffect}
+          />
 
-          <Link isExternal href="https://github.com/claytonfaria">
-            <IconButton
-              fontSize="1.4rem"
-              variant="ghost"
-              icon={<FaGithub />}
-              cursor="pointer"
-              _hover={buttonHoverEffect}
-              _active={buttonHoverEffect}
-            />
-          </Link>
-          <Link isExternal href="https://linkedin.com/in/claytonfaria">
-            <IconButton
-              fontSize="1.4rem"
-              variant="ghost"
-              icon={<FaLinkedin />}
-              cursor="pointer"
-              _hover={buttonHoverEffect}
-              _active={buttonHoverEffect}
-            />
-          </Link>
+          <IconButton
+            as={Link}
+            isExternal
+            href="https://github.com/claytonfaria"
+            fontSize="1.4rem"
+            variant="ghost"
+            aria-label="Github"
+            icon={<FaGithub />}
+            cursor="pointer"
+            _hover={buttonHoverEffect}
+            _active={buttonHoverEffect}
+          />
+          <IconButton
+            as={Link}
+            isExternal
+            href="https://linkedin.com/in/claytonfaria"
+            fontSize="1.4rem"
+            variant="ghost"
+            aria-label="LinkedIn"
+            icon={<FaLinkedin />}
+            cursor="pointer"
+            _hover={buttonHoverEffect}
+            _active={buttonHoverEffect}
+          />
         </Flex>
       </Flex>
     </Box>

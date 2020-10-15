@@ -13,13 +13,15 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 
 import BottomNavigation from './bottomNavigation';
 
-export default function Header({
-  colorMode,
-  toggleColorMode,
-  menuTextColor,
-  highlightColor,
-  primaryTextColor,
-}) {
+export default function Header({ colorScheme }) {
+  const {
+    colorMode,
+    toggleColorMode,
+    menuTextColor,
+    highlightColor,
+    primaryTextColor,
+  } = colorScheme;
+
   return (
     <Flex
       maxW="100%"
