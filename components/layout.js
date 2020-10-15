@@ -1,6 +1,7 @@
 import { useColorMode, useColorModeValue, Container } from '@chakra-ui/core';
 import { cloneElement } from 'react';
 
+import { projects } from '../data/projects.json';
 import Footer from './footer';
 import Header from './header';
 
@@ -27,7 +28,7 @@ export default function Layout({ children }) {
         marginBottom={['6rem', '0']}
         paddingX={[4, 5]}
       >
-        {cloneElement(children, { colorScheme })}
+        {cloneElement(children, { colorScheme, projects })}
       </Container>
       <Footer colorScheme={colorScheme} />
     </>

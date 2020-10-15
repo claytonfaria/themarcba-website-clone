@@ -6,7 +6,9 @@
       "date": "08/07/2020",
       "description": "In this post, we take a look a how we can use cronjobs to schedule tasks in Node.js",
       "tags": ["Next.js", "JavaScript"],
-      "imgUrl": ""
+      "imgUrl": "",
+      "liveUrl": "",
+      "repoUrl": ""
     },
     {
       "id": 2,
@@ -14,7 +16,9 @@
       "date": "10/05/2020",
       "description": "this is a sample just to check how it is going ",
       "tags": ["Node.js", "Express"],
-      "imgUrl": ""
+      "imgUrl": "",
+      "liveUrl": "",
+      "repoUrl": ""
     }
   ]
 }

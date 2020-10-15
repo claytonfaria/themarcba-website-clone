@@ -6,10 +6,10 @@ import { FiFeather } from 'react-icons/fi';
 import HeroSVG from '../components/SVGs/heroSVG';
 import CardsWrapper from '../components/cardsWrapper';
 import DisplayCard from '../components/displayCard';
-import { projects } from '../data/projects.json';
+
 import styles from '../styles/home.module.css';
 
-export default function Home({ colorScheme }) {
+export default function Home({ colorScheme, projects }) {
   const { highlightColor, primaryTextColor } = colorScheme;
 
   return (
@@ -81,7 +81,7 @@ export default function Home({ colorScheme }) {
         textColor={primaryTextColor}
         fontWeight="500"
       >
-        Here are my most important projects:
+        Here are my featured projects:
       </Text>
       <CardsWrapper>
         {projects.map((item) => (

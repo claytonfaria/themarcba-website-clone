@@ -1,5 +1,4 @@
 import {
-  Box,
   Heading,
   useColorModeValue,
   Text,
@@ -9,6 +8,7 @@ import {
   ButtonGroup,
   Link,
   colorMode,
+  chakra,
 } from '@chakra-ui/core';
 import { motion } from 'framer-motion';
 
@@ -18,8 +18,7 @@ export default function DisplayCard({ colorScheme, item }) {
   const cardBgColor = useColorModeValue('white', '#0d1131');
   const tagBgColor = useColorModeValue('white', 'black');
 
-  const MotionBox = motion.custom(Box);
-  const MotionFlex = motion.custom(Flex);
+  const MotionBox = chakra(motion.div);
   const MotionImage = motion.custom(Image);
 
   const imageMotion = {
@@ -41,14 +40,15 @@ export default function DisplayCard({ colorScheme, item }) {
   };
 
   return (
-    <MotionFlex
+    <MotionBox
+      display="flex"
       margin="1rem"
       justifyContent="center"
       maxW={['20.5rem', '20.5rem', '20.5rem', '24rem']}
       marginX="1rem"
       alignItems="center"
       alignSelf="flex-start"
-      direction="column"
+      flexDirection="column"
       whileHover="hover"
       whileTap="tap"
     >
@@ -163,6 +163,6 @@ export default function DisplayCard({ colorScheme, item }) {
           </ButtonGroup>
         </Flex>
       </MotionBox>
-    </MotionFlex>
+    </MotionBox>
   );
 }
