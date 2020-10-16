@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa';
 
 export default function Footer({ colorScheme }) {
-  const { colorMode, primaryTextColor, highlightColor } = colorScheme;
+  const { primaryTextColor, highlightColor } = colorScheme;
 
   const buttonHoverEffect = {
     color: highlightColor,
@@ -18,11 +18,10 @@ export default function Footer({ colorScheme }) {
   return (
     <Box
       width="100%"
-      boxShadow="0 -10px 10px rgba(0,0,0,.2)"
-      position="sticky"
+      // boxShadow="0 -10px 10px rgba(0,0,0,.2)"
       marginTop="2.5rem"
       padding="1.25rem"
-      background={colorMode === 'dark' && '#0d1131'}
+      // background={colorMode === 'dark' && '#0d1131'}
       color={primaryTextColor}
       marginBottom="0"
       paddingBottom="0.8rem"

@@ -16,7 +16,7 @@ const theme = merge(chakraTheme, fonts, {
         fontFamily: 'body',
         color: mode('gray.800', 'whiteAlpha.900')(props),
         bg: mode('white', '#070919')(props),
-        transition: 'background-color 0.8s',
+        transition: 'background-color 0.5s',
         lineHeight: 'base',
       },
       '*::placeholder': {

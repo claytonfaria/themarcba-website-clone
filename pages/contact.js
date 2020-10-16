@@ -1,9 +1,11 @@
-import { Heading, Text, Box, Flex } from '@chakra-ui/core';
+import { Heading, Text, Box, Flex, Link, HStack, Icon } from '@chakra-ui/core';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-import ContactSvg from '../components/SVGs/contactSvg';
+import ContactSvg from '../components/svg/contactSvg';
 
 export default function Contact({ colorScheme }) {
-  const { primaryTextColor } = colorScheme;
+  const { primaryTextColor, highlightColor } = colorScheme;
+
   return (
     <Box marginTop="1.5rem">
       <Heading
@@ -17,7 +19,7 @@ export default function Contact({ colorScheme }) {
       </Heading>
       <Flex direction={['column', 'row']}>
         <Box flex="1 0%">
-          <ContactSvg />
+          <ContactSvg color={highlightColor} />
         </Box>
         <Box flex="1 0%">
           <Text
@@ -49,6 +51,89 @@ export default function Contact({ colorScheme }) {
             Feel free to check out my social media presence below to get to know
             me better.
           </Text>
+          <HStack justifyContent="center" alignItems="center" spacing={5}>
+            <Link
+              isExternal
+              href="https://twitter.com/fariaclayton"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+              role="group"
+              _hover={{ textDecoration: 'none' }}
+            >
+              <Icon
+                fontSize="2.7rem"
+                textColor={primaryTextColor}
+                as={FaTwitter}
+                _groupHover={{ transform: 'translateY(-8px)' }}
+                transition="all .3s ease-in-out"
+              />
+              <Text
+                opacity="0"
+                textColor={highlightColor}
+                _groupHover={{ opacity: '1' }}
+                transition="all .3s ease-in-out"
+                fontWeight="600"
+              >
+                Twitter
+              </Text>
+            </Link>
+            <Link
+              isExternal
+              href="https://github.com/claytonfaria"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+              role="group"
+              _hover={{ textDecoration: 'none' }}
+            >
+              <Icon
+                fontSize="2.7rem"
+                textColor={primaryTextColor}
+                as={FaGithub}
+                _groupHover={{ transform: 'translateY(-8px)' }}
+                transition="all .3s ease-in-out"
+              />
+              <Text
+                opacity="0"
+                textColor={highlightColor}
+                _groupHover={{ opacity: '1' }}
+                transition="all .3s ease-in-out"
+                fontWeight="600"
+              >
+                GitHub
+              </Text>
+            </Link>
+            <Link
+              isExternal
+              href="https://linkedin.com/in/claytonfaria"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+              role="group"
+              _hover={{ textDecoration: 'none' }}
+            >
+              <Icon
+                fontSize="2.7rem"
+                textColor={primaryTextColor}
+                as={FaLinkedin}
+                _groupHover={{ transform: 'translateY(-8px)' }}
+                transition="all .3s ease-in-out"
+              />
+              <Text
+                opacity="0"
+                textColor={highlightColor}
+                _groupHover={{ opacity: '1' }}
+                transition="all .3s ease-in-out"
+                fontWeight="600"
+              >
+                LinkedIn
+              </Text>
+            </Link>
+          </HStack>
         </Box>
       </Flex>
     </Box>

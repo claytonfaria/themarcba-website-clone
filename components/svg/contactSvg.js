@@ -1,6 +1,6 @@
 import { Icon, Container } from '@chakra-ui/core';
 
-export default function ContactSvg({ color, marginTop }) {
+export default function ContactSvg({ color }) {
   return (
     <Container maxWidth="100%" textAlign="center" padding="0" margin="0">
       <Icon
@@ -18,7 +18,7 @@ export default function ContactSvg({ color, marginTop }) {
         <path
           d="M443.69315,415.65256A146.90034,146.90034,0,1,0,375.53452,470.378a47.51816,47.51816,0,1,0,68.15863-54.72543Z"
           transform="translate(-174.5 -76.9729)"
-          fill="#6c63ff"
+          fill="currentColor"
         />
         <rect
           x="59.78151"
@@ -44,7 +44,7 @@ export default function ContactSvg({ color, marginTop }) {
         <path
           d="M756.30685,306.37888a146.90034,146.90034,0,1,1,68.15863,54.72543,47.51816,47.51816,0,1,1-68.15863-54.72543Z"
           transform="translate(-174.5 -76.9729)"
-          fill="#6c63ff"
+          fill="currentColor"
         />
         <rect
           x="790.97254"
@@ -73,7 +73,7 @@ export default function ContactSvg({ color, marginTop }) {
         <path
           d="M501.21288,708.464a82.01252,82.01252,0,1,1,38.0521,30.55252,26.52879,26.52879,0,1,1-38.0521-30.55252Z"
           transform="translate(-174.5 -76.9729)"
-          fill="#6c63ff"
+          fill="currentColor"
         />
         <circle cx="362.5511" cy="583.8403" r="9.49088" fill="#fff" />
         <circle cx="394.93176" cy="583.8403" r="9.49088" fill="#fff" />
@@ -172,10 +172,10 @@ export default function ContactSvg({ color, marginTop }) {
           transform="translate(-174.5 -76.9729)"
           fill="#3f3d56"
         />
-        <circle cx="653" cy="374.0542" r="13" fill="#6c63ff" />
+        <circle cx="653" cy="374.0542" r="13" fill="currentColor" />
         <circle cx="694" cy="422.0542" r="13" fill="#3f3d56" />
-        <circle cx="666" cy="454.0542" r="13" fill="#6c63ff" />
-        <circle cx="700" cy="481.0542" r="13" fill="#6c63ff" />
+        <circle cx="666" cy="454.0542" r="13" fill="currentColor" />
+        <circle cx="700" cy="481.0542" r="13" fill="currentColor" />
         <circle cx="656" cy="523.0542" r="13" fill="#3f3d56" />
         <path
           d="M846.5,723.0271s-13-32,26-56Z"
