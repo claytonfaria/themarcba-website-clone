@@ -1,6 +1,6 @@
 import { Icon, Container } from '@chakra-ui/core';
 
-export default function HeroSVG({ color, marginTop }) {
+export default function HeroSvg({ color, marginTop }) {
   return (
     <Container maxWidth="100%" textAlign="center" padding="0" margin="0">
       <Icon

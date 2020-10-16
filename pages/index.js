@@ -2,7 +2,7 @@ import { Box, Heading, Icon, Text, Divider } from '@chakra-ui/core';
 import { FaHeart } from 'react-icons/fa';
 import { FiFeather } from 'react-icons/fi';
 
-import HeroSVG from '../components/SVGs/heroSVG';
+import HeroSvg from '../components/SVGs/heroSvg';
 import CardsWrapper from '../components/cardsWrapper';
 import DisplayCard from '../components/displayCard';
 import styles from '../styles/home.module.css';
@@ -33,7 +33,7 @@ export default function Home({ colorScheme, projects }) {
         web development
       </Heading>
 
-      <HeroSVG color={highlightColor} marginTop={['3.5rem', '3rem']} />
+      <HeroSvg color={highlightColor} marginTop={['3.5rem', '3rem']} />
       <Text
         fontSize="1.2rem"
         marginBottom="2rem"

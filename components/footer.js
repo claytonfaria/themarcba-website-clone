@@ -19,7 +19,7 @@ export default function Footer({ colorScheme }) {
     <Box
       width="100%"
       boxShadow="0 -10px 10px rgba(0,0,0,.2)"
-      position="relative"
+      position="sticky"
       marginTop="2.5rem"
       padding="1.25rem"
       background={colorMode === 'dark' && '#0d1131'}
