@@ -61,6 +61,7 @@ export default function Contact({ colorScheme }) {
               flexDirection="column"
               role="group"
               _hover={{ textDecoration: 'none' }}
+              aria-label="twitter"
             >
               <Icon
                 fontSize="2.7rem"
@@ -88,6 +89,7 @@ export default function Contact({ colorScheme }) {
               flexDirection="column"
               role="group"
               _hover={{ textDecoration: 'none' }}
+              aria-label="Github"
             >
               <Icon
                 fontSize="2.7rem"
@@ -115,6 +117,7 @@ export default function Contact({ colorScheme }) {
               flexDirection="column"
               role="group"
               _hover={{ textDecoration: 'none' }}
+              aria-label="LinkedIn"
             >
               <Icon
                 fontSize="2.7rem"
