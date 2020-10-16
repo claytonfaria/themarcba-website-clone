@@ -1,7 +1,10 @@
 import { Heading, Icon, Text, Box } from '@chakra-ui/core';
 import { FiFeather } from 'react-icons/fi';
 
-export default function Projects({ colorScheme }) {
+import CardsWrapper from '../components/cardsWrapper';
+import DisplayCard from '../components/displayCard';
+
+export default function Projects({ colorScheme, projects }) {
   const { primaryTextColor } = colorScheme;
 
   return (
@@ -25,6 +28,14 @@ export default function Projects({ colorScheme }) {
       >
         Here you can find my most important projects:
       </Text>
+
+      <CardsWrapper>
+        {projects
+          .sort((a, b) => b.id - a.id)
+          .map((item) => (
+            <DisplayCard colorScheme={colorScheme} item={item} key={item.id} />
+          ))}
+      </CardsWrapper>
     </Box>
   );
 }

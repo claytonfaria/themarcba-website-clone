@@ -9,7 +9,6 @@ const fonts = {
     mono: "'Zilla Slab', serif",
   },
 };
-
 const theme = merge(chakraTheme, fonts, {
   styles: {
     global: (props) => ({

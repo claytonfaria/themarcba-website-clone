@@ -2,23 +2,58 @@
   "projects": [
     {
       "id": 1,
-      "title": "MarketNews",
+      "title": "Number 1",
       "date": "08/07/2020",
       "description": "In this post, we take a look a how we can use cronjobs to schedule tasks in Node.js",
       "tags": ["Next.js", "JavaScript"],
       "imgUrl": "",
       "liveUrl": "",
-      "repoUrl": ""
+      "repoUrl": "",
+      "featured": true
     },
     {
       "id": 2,
-      "title": "Beauty shop",
+      "title": "Number 2",
       "date": "10/05/2020",
       "description": "this is a sample just to check how it is going ",
       "tags": ["Node.js", "Express"],
       "imgUrl": "",
       "liveUrl": "",
-      "repoUrl": ""
+      "repoUrl": "",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Number 3",
+      "date": "08/07/2020",
+      "description": "In this post, we take a look a how we can use cronjobs to schedule tasks in Node.js",
+      "tags": ["Next.js", "JavaScript"],
+      "imgUrl": "",
+      "liveUrl": "",
+      "repoUrl": "",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Number 4",
+      "date": "10/05/2020",
+      "description": "this is a sample just to check how it is going ",
+      "tags": ["Node.js", "Express"],
+      "imgUrl": "",
+      "liveUrl": "",
+      "repoUrl": "",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Number 5",
+      "date": "10/05/2020",
+      "description": "this is a sample just to check how it is going ",
+      "tags": ["Node.js", "Express"],
+      "imgUrl": "",
+      "liveUrl": "",
+      "repoUrl": "",
+      "featured": false
     }
   ]
 }

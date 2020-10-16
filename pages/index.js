@@ -1,12 +1,10 @@
 import { Box, Heading, Icon, Text, Divider } from '@chakra-ui/core';
-import Head from 'next/head';
 import { FaHeart } from 'react-icons/fa';
 import { FiFeather } from 'react-icons/fi';
 
 import HeroSVG from '../components/SVGs/heroSVG';
 import CardsWrapper from '../components/cardsWrapper';
 import DisplayCard from '../components/displayCard';
-
 import styles from '../styles/home.module.css';
 
 export default function Home({ colorScheme, projects }) {
@@ -14,16 +12,11 @@ export default function Home({ colorScheme, projects }) {
 
   return (
     <Box width="100%" marginTop="1.5rem">
-      <Head>
-        <title>Create Next App</title>
-      </Head>
-
       <Heading
         as="h1"
         fontSize="31px"
         lineHeight="1.5"
         fontWeight={['600', '630']}
-        // fontFamily="Zilla Slab"
       >
         Hello, I'm Clayton{' '}
         <Box as="span" className={styles.wave}>
@@ -84,9 +77,12 @@ export default function Home({ colorScheme, projects }) {
         Here are my featured projects:
       </Text>
       <CardsWrapper>
-        {projects.map((item) => (
-          <DisplayCard colorScheme={colorScheme} item={item} key={item.id} />
-        ))}
+        {projects
+          .filter((item) => item.featured)
+          .sort((a, b) => b.id - a.id)
+          .map((item) => (
+            <DisplayCard colorScheme={colorScheme} item={item} key={item.id} />
+          ))}
       </CardsWrapper>
     </Box>
   );

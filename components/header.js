@@ -124,27 +124,29 @@ export default function Header({ colorScheme }) {
             </Link>
           </NextLink>
         </ListItem>
-        <Button
-          as="li"
-          display={['none', 'flex']}
-          variant="outline"
-          borderRadius="10px"
-          border="2px"
-          borderColor={highlightColor}
-          color={highlightColor}
-          fontSize="1.1rem"
-          fontWeight="700"
-          _hover={{
-            bg: highlightColor,
-            color: colorMode === 'dark' ? 'black' : 'white',
-          }}
-          _active={{
-            bg: highlightColor,
-            color: colorMode === 'dark' ? 'black' : 'white',
-          }}
-        >
-          <NextLink href="/contact">Get in touch</NextLink>
-        </Button>
+        <NextLink href="/contact">
+          <Button
+            as="li"
+            display={['none', 'flex']}
+            variant="outline"
+            borderRadius="10px"
+            border="2px"
+            borderColor={highlightColor}
+            color={highlightColor}
+            fontSize="1.1rem"
+            fontWeight="700"
+            _hover={{
+              bg: highlightColor,
+              color: colorMode === 'dark' ? 'black' : 'white',
+            }}
+            _active={{
+              bg: highlightColor,
+              color: colorMode === 'dark' ? 'black' : 'white',
+            }}
+          >
+            Get in touch
+          </Button>
+        </NextLink>
       </HStack>
       <BottomNavigation colorScheme={colorScheme} />
     </Flex>
