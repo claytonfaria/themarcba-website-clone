@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function pageMetadata({ siteTitle }) {
+export default function PageMetadata({ siteTitle }) {
   return (
     <Head>
       <link rel="icon" href="/favicon.ico" />

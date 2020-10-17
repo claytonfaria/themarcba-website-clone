@@ -5,7 +5,7 @@ import { projects } from '../../data/projects.json';
 import BottomNavigation from './bottomNavigation';
 import Footer from './footer';
 import Header from './header';
-import pageMetadata from './pageMetadata';
+import PageMetadata from './pageMetadata';
 
 export default function Layout({ children }) {
   const siteTitle =
@@ -13,7 +13,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <pageMetadata siteTitle={siteTitle} />
+      <PageMetadata siteTitle={siteTitle} />
       <Header />
       <Flex direction="column" minHeight="90vh">
         <Container
