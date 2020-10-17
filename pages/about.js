@@ -9,24 +9,49 @@ export default function About() {
 
   return (
     <Box>
-      <Flex>
-        <Image
-          src="/profile-big.jpeg"
-          alt="Clayton Faria profile picture"
-          marginRight="5rem"
+      <Flex
+        direction={['column', 'column', 'row']}
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Box
+          marginRight={['0', '0', '5rem']}
           marginBottom="2rem"
           width="12rem"
+          height="12rem"
           overflow="hidden"
           marginTop="2rem"
-        />
-        <Box flex="1">
-          <Heading as="h1" marginTop="2.2rem" fontSize="2rem" fontWeight="600">
+          display="inline-block"
+          justifyContent="center"
+          alignSelf="center"
+          position="relative"
+          borderRadius="full"
+          border="2px"
+        >
+          <Image
+            src="/profile-big.jpeg"
+            alt="Clayton Faria profile picture"
+            objectFit="cover"
+            height="100%"
+            width="100%"
+            position="absolute"
+            top="0"
+          />
+        </Box>
+        <Box flex="1 0%">
+          <Heading
+            as="h1"
+            marginTop="2.2rem"
+            fontSize="2rem"
+            fontWeight="700"
+            marginBottom=".5rem"
+          >
             Hello
           </Heading>
           <Text
             fontSize="1.2rem"
             marginBottom="2rem"
-            marginTop={['3.5rem', '1.5rem']}
+            marginTop="1rem"
             textColor={primaryTextColor}
             fontWeight="500"
           >
@@ -37,14 +62,20 @@ export default function About() {
           </Text>
         </Box>
       </Flex>
-      <Heading as="h1" marginTop="2rem" fontSize="2rem" fontWeight="700">
+      <Heading
+        as="h1"
+        marginTop="2rem"
+        marginBottom=".5rem"
+        fontSize="2rem"
+        fontWeight="700"
+      >
         Work experience{' '}
         <Icon verticalAlign="-15%" fontSize="2.2rem" as={FaLaptopCode} />
       </Heading>
       <WorkExperience
         employment={{
-          company: 'Marc Backes Labs',
-          dateAndCountry: 'July 2017 - Current · Luxembourg 🇱🇺',
+          company: 'Clayton Faria Labs',
+          dateAndCountry: 'July 2017 - Current · Taipei ',
           position: 'Freelancing',
         }}
       />
