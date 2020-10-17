@@ -18,10 +18,8 @@ export default function Footer({ colorScheme }) {
   return (
     <Box
       width="100%"
-      // boxShadow="0 -10px 10px rgba(0,0,0,.2)"
       marginTop="2.5rem"
       padding="1.25rem"
-      // background={colorMode === 'dark' && '#0d1131'}
       color={primaryTextColor}
       marginBottom="0"
       paddingBottom="0.8rem"

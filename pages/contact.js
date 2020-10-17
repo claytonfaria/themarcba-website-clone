@@ -1,4 +1,5 @@
 import { Heading, Text, Box, Flex, Link, HStack, Icon } from '@chakra-ui/core';
+import { AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 import ContactSvg from '../components/svg/contactSvg';
@@ -39,7 +40,28 @@ export default function Contact({ colorScheme }) {
             textColor={primaryTextColor}
             fontWeight="500"
           >
-            My preferred way of contact is via Twitter or email .
+            My <strong>preferred way</strong> of contact is via{' '}
+            <Link
+              isExternal
+              href="https://twitter.com/fariaclayton"
+              color={highlightColor}
+              fontWeight="600"
+              transition="all .2s ease-in-out"
+              _hover={{ borderBottom: '2px', textDecoration: 'none' }}
+            >
+              Twitter <Icon verticalAlign="-15%" as={FaTwitter} />
+            </Link>{' '}
+            or{' '}
+            <Link
+              isExternal
+              href="mailto:hello@claytonfaria.dev"
+              color={highlightColor}
+              fontWeight="600"
+              transition="all .2s ease-in-out"
+              _hover={{ borderBottom: '2px', textDecoration: 'none' }}
+            >
+              email <Icon verticalAlign="-15%" as={AiOutlineMail} />
+            </Link>{' '}
           </Text>
           <Text
             fontSize="1.2rem"

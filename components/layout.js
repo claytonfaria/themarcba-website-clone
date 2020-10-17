@@ -1,4 +1,9 @@
-import { useColorMode, useColorModeValue, Container } from '@chakra-ui/core';
+import {
+  useColorMode,
+  useColorModeValue,
+  Container,
+  Flex,
+} from '@chakra-ui/core';
 import Head from 'next/head';
 import { cloneElement } from 'react';
 
@@ -31,7 +36,7 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Web Developer | Clayton Faria | JavaScript | React.js, Next.js, Node.js"
+          content="Web Developer | Clayton Faria | JavaScript | React.js | Next.js"
         />
         <meta
           property="og:image"
@@ -43,15 +48,17 @@ export default function Layout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header colorScheme={colorScheme} />
-      <Container
-        maxWidth={['768px', '768px', '768px', '1024px']}
-        minHeight="100vh"
-        marginBottom={['6rem', '0']}
-        paddingX={[4, 5]}
-      >
-        {cloneElement(children, { colorScheme, projects })}
-      </Container>
-      <Footer colorScheme={colorScheme} />
+      <Flex direction="column" minHeight="90vh">
+        <Container
+          maxWidth={['768px', '768px', '768px', '1024px']}
+          marginBottom={['6rem', '0']}
+          paddingX={[4, 5]}
+          flex="1"
+        >
+          {cloneElement(children, { colorScheme, projects })}
+        </Container>
+        <Footer colorScheme={colorScheme} />
+      </Flex>
     </>
   );
 }
