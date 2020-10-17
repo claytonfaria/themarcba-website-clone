@@ -12,9 +12,13 @@ import {
 } from '@chakra-ui/core';
 import { motion } from 'framer-motion';
 
-export default function DisplayCard({ colorScheme, item }) {
+import { useCustomColors } from '../../context/colorContext';
+
+export default function DisplayCard({ item }) {
   const { title, date, description, tags, imgUrl, reporUrl } = item;
-  const { highlightColor, primaryTextColor } = colorScheme;
+
+  const { highlightColor, primaryTextColor } = useCustomColors();
+
   const cardBgColor = useColorModeValue('white', '#0d1131');
   const tagBgColor = useColorModeValue('white', 'black');
 

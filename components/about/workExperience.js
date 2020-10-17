@@ -1,7 +1,9 @@
 import { Box, Heading, Flex, Text } from '@chakra-ui/core';
 
-export default function WorkExperience({ colorScheme, employment }) {
-  const { highlightColor, primaryTextColor } = colorScheme;
+import { useCustomColors } from '../../context/colorContext';
+
+export default function WorkExperience({ employment }) {
+  const { highlightColor, primaryTextColor } = useCustomColors();
   const { dateAndCountry, position, company } = employment;
   return (
     <>

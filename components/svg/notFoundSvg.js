@@ -1,6 +1,9 @@
 import { Icon, Container } from '@chakra-ui/core';
 
-export default function NotFoundSvg({ color }) {
+import { useCustomColors } from '../../context/colorContext';
+
+export default function NotFoundSvg() {
+  const { highlightColor } = useCustomColors();
   return (
     <Container
       maxWidth="100%"
@@ -11,7 +14,7 @@ export default function NotFoundSvg({ color }) {
     >
       <Icon
         maxWidth={['90%', '80%']}
-        color={color}
+        color={highlightColor}
         id="fd59ce54-f850-4dfc-bc34-dd7d379d600e"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"

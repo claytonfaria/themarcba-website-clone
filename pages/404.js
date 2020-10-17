@@ -3,9 +3,10 @@ import NextLink from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import { NotFoundSvg } from '../components/svg';
+import { useCustomColors } from '../context/colorContext';
 
-export default function Custom404({ colorScheme }) {
-  const { highlightColor, colorMode } = colorScheme;
+export default function Custom404() {
+  const { highlightColor, colorMode } = useCustomColors();
 
   return (
     <Flex direction="column" justifyContent="center" alignItems="center">

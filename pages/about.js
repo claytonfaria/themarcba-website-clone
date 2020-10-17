@@ -2,9 +2,11 @@ import { Box, Heading, Image, Flex, Text, Icon } from '@chakra-ui/core';
 import { FaLaptopCode } from 'react-icons/fa';
 
 import WorkExperience from '../components/about/workExperience';
+import { useCustomColors } from '../context/colorContext';
 
-export default function About({ colorScheme }) {
-  const { primaryTextColor } = colorScheme;
+export default function About() {
+  const { primaryTextColor } = useCustomColors();
+
   return (
     <Box>
       <Flex>
@@ -40,7 +42,6 @@ export default function About({ colorScheme }) {
         <Icon verticalAlign="-15%" fontSize="2.2rem" as={FaLaptopCode} />
       </Heading>
       <WorkExperience
-        colorScheme={colorScheme}
         employment={{
           company: 'Marc Backes Labs',
           dateAndCountry: 'July 2017 - Current · Luxembourg 🇱🇺',

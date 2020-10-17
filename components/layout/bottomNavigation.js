@@ -9,8 +9,10 @@ import {
 } from 'react-icons/ai';
 import { FiFeather } from 'react-icons/fi';
 
-export default function BottomNavigation({ colorScheme }) {
-  const { primaryTextColor, highlightColor, colorMode } = colorScheme;
+import { useCustomColors } from '../../context/colorContext';
+
+export default function BottomNavigation() {
+  const { primaryTextColor, highlightColor, colorMode } = useCustomColors();
 
   const router = useRouter();
   return (

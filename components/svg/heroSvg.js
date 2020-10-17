@@ -1,18 +1,26 @@
 import { Icon, Container } from '@chakra-ui/core';
 
+import { useCustomColors } from '../../context/colorContext';
+
 export default function HeroSvg({ color, marginTop }) {
+  const { highlightColor } = useCustomColors();
   return (
-    <Container maxWidth="100%" textAlign="center" padding="0" margin="0">
+    <Container
+      maxWidth="100%"
+      textAlign="center"
+      padding="0"
+      margin="0"
+      marginTop={['3.5rem', '3rem']}
+    >
       <Icon
         maxWidth={['100%', '75%']}
-        marginTop={marginTop}
         id="ade8c9af-7e2e-4eda-b5c8-b06129257226"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         width="1076.06371"
         height="755.2279"
         viewBox="0 0 1076.06371 755.2279"
-        color={color}
+        color={highlightColor}
       >
         <title>web_developer</title>
         <path

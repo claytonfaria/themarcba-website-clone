@@ -4,10 +4,11 @@ import { FiFeather } from 'react-icons/fi';
 
 import { CardsWrapper, DisplayCard } from '../components/projects';
 import { HeroSvg } from '../components/svg';
+import { useCustomColors } from '../context/colorContext';
 import styles from '../styles/home.module.css';
 
-export default function Home({ colorScheme, projects }) {
-  const { highlightColor, primaryTextColor } = colorScheme;
+export default function Home({ projects }) {
+  const { primaryTextColor } = useCustomColors();
 
   return (
     <Box width="100%" marginTop="1.5rem">
@@ -32,7 +33,7 @@ export default function Home({ colorScheme, projects }) {
         web development
       </Heading>
 
-      <HeroSvg color={highlightColor} marginTop={['3.5rem', '3rem']} />
+      <HeroSvg />
       <Text
         fontSize="1.2rem"
         marginBottom="2rem"
@@ -80,7 +81,7 @@ export default function Home({ colorScheme, projects }) {
           .filter((item) => item.featured)
           .sort((a, b) => b.id - a.id)
           .map((item) => (
-            <DisplayCard colorScheme={colorScheme} item={item} key={item.id} />
+            <DisplayCard item={item} key={item.id} />
           ))}
       </CardsWrapper>
     </Box>

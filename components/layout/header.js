@@ -13,13 +13,15 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-export default function Header({ colorScheme }) {
+import { useCustomColors } from '../../context/colorContext';
+
+export default function Header() {
   const {
     colorMode,
     toggleColorMode,
     menuTextColor,
     highlightColor,
-  } = colorScheme;
+  } = useCustomColors();
   const router = useRouter();
 
   return (

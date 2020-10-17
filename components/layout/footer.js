@@ -7,8 +7,10 @@ import {
   FaHeart,
 } from 'react-icons/fa';
 
-export default function Footer({ colorScheme }) {
-  const { primaryTextColor, highlightColor } = colorScheme;
+import { useCustomColors } from '../../context/colorContext';
+
+export default function Footer() {
+  const { primaryTextColor, highlightColor } = useCustomColors();
 
   const buttonHoverEffect = {
     color: highlightColor,

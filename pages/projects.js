@@ -2,9 +2,10 @@ import { Heading, Icon, Text, Box } from '@chakra-ui/core';
 import { FiFeather } from 'react-icons/fi';
 
 import { CardsWrapper, DisplayCard } from '../components/projects';
+import { useCustomColors } from '../context/colorContext';
 
-export default function Projects({ colorScheme, projects }) {
-  const { primaryTextColor } = colorScheme;
+export default function Projects({ projects }) {
+  const { primaryTextColor } = useCustomColors();
 
   return (
     <Box marginTop="1.5rem">
@@ -32,7 +33,7 @@ export default function Projects({ colorScheme, projects }) {
         {projects
           .sort((a, b) => b.id - a.id)
           .map((item) => (
-            <DisplayCard colorScheme={colorScheme} item={item} key={item.id} />
+            <DisplayCard item={item} key={item.id} />
           ))}
       </CardsWrapper>
     </Box>

@@ -1,11 +1,14 @@
 import { Icon, Container } from '@chakra-ui/core';
 
-export default function ContactSvg({ color }) {
+import { useCustomColors } from '../../context/colorContext';
+
+export default function ContactSvg() {
+  const { highlightColor } = useCustomColors();
   return (
     <Container maxWidth="100%" textAlign="center" padding="0" margin="0">
       <Icon
         maxWidth={['90%', '80%']}
-        color={color}
+        color={highlightColor}
         id="bafbdcdd-db4a-4743-9ceb-46364dc67d6e"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"

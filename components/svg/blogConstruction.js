@@ -1,6 +1,9 @@
 import { Icon, Container } from '@chakra-ui/core';
 
-export default function BlogConstruction({ color }) {
+import { useCustomColors } from '../../context/colorContext';
+
+export default function BlogConstruction() {
+  const { highlightColor } = useCustomColors();
   return (
     <Container
       maxWidth="100%"
@@ -11,7 +14,7 @@ export default function BlogConstruction({ color }) {
     >
       <Icon
         maxWidth={['90%', '80%']}
-        color={color}
+        color={highlightColor}
         id="e43251fe-2b99-4b63-8176-d5da4893f038"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"

@@ -3,9 +3,10 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 import { ContactSvg } from '../components/svg';
+import { useCustomColors } from '../context/colorContext';
 
-export default function Contact({ colorScheme }) {
-  const { primaryTextColor, highlightColor } = colorScheme;
+export default function Contact() {
+  const { primaryTextColor, highlightColor } = useCustomColors();
 
   return (
     <Box marginTop="1.5rem">
@@ -89,7 +90,10 @@ export default function Contact({ colorScheme }) {
                 fontSize="2.7rem"
                 textColor={primaryTextColor}
                 as={FaTwitter}
-                _groupHover={{ transform: 'translateY(-8px)' }}
+                _groupHover={{
+                  color: highlightColor,
+                  transform: 'translateY(-8px)',
+                }}
                 transition="all .3s ease-in-out"
               />
               <Text
@@ -117,7 +121,10 @@ export default function Contact({ colorScheme }) {
                 fontSize="2.7rem"
                 textColor={primaryTextColor}
                 as={FaGithub}
-                _groupHover={{ transform: 'translateY(-8px)' }}
+                _groupHover={{
+                  color: highlightColor,
+                  transform: 'translateY(-8px)',
+                }}
                 transition="all .3s ease-in-out"
               />
               <Text
@@ -145,7 +152,10 @@ export default function Contact({ colorScheme }) {
                 fontSize="2.7rem"
                 textColor={primaryTextColor}
                 as={FaLinkedin}
-                _groupHover={{ transform: 'translateY(-8px)' }}
+                _groupHover={{
+                  color: highlightColor,
+                  transform: 'translateY(-8px)',
+                }}
                 transition="all .3s ease-in-out"
               />
               <Text
