@@ -1,4 +1,4 @@
-import { Link, Text, HStack } from '@chakra-ui/core';
+import { Link, Text, HStack, Icon } from '@chakra-ui/core';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -38,7 +38,7 @@ export default function BottomNavigation({ colorScheme }) {
           _hover={{ textDecoration: 'none' }}
           color={router.pathname === '/' && highlightColor}
         >
-          <AiOutlineHome />
+          <Icon as={AiOutlineHome} />
           <Text>Home</Text>
         </Link>
       </NextLink>
@@ -52,7 +52,7 @@ export default function BottomNavigation({ colorScheme }) {
           _hover={{ textDecoration: 'none' }}
           color={router.pathname === '/about' && highlightColor}
         >
-          <AiOutlineInfoCircle />
+          <Icon as={AiOutlineInfoCircle} />
           <Text>About</Text>
         </Link>
       </NextLink>
@@ -66,7 +66,7 @@ export default function BottomNavigation({ colorScheme }) {
           _hover={{ textDecoration: 'none' }}
           color={router.pathname === '/projects' && highlightColor}
         >
-          <AiOutlineProject />
+          <Icon as={AiOutlineProject} />
           <Text>Projects</Text>
         </Link>
       </NextLink>
@@ -80,7 +80,7 @@ export default function BottomNavigation({ colorScheme }) {
           _hover={{ textDecoration: 'none' }}
           color={router.pathname === '/blog' && highlightColor}
         >
-          <FiFeather />
+          <Icon as={FiFeather} />
           <Text>Blog</Text>
         </Link>
       </NextLink>
@@ -94,7 +94,7 @@ export default function BottomNavigation({ colorScheme }) {
           _hover={{ textDecoration: 'none' }}
           color={router.pathname === '/contact' && highlightColor}
         >
-          <AiOutlineMail />
+          <Icon as={AiOutlineMail} />
           <Text>Contact</Text>
         </Link>
       </NextLink>

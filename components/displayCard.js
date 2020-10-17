@@ -13,7 +13,7 @@ import {
 import { motion } from 'framer-motion';
 
 export default function DisplayCard({ colorScheme, item }) {
-  const { title, date, description, tags, imgUrl } = item;
+  const { title, date, description, tags, imgUrl, reporUrl } = item;
   const { highlightColor, primaryTextColor } = colorScheme;
   const cardBgColor = useColorModeValue('white', '#0d1131');
   const tagBgColor = useColorModeValue('white', 'black');
@@ -56,6 +56,7 @@ export default function DisplayCard({ colorScheme, item }) {
         src="/image1.png"
         height="auto"
         width="100%"
+        objectFit="cover"
         borderRadius=".5rem"
         alt="post image"
         variants={imageMotion}
