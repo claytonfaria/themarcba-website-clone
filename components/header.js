@@ -32,7 +32,7 @@ export default function Header({ colorScheme }) {
       marginX="auto"
       justifyContent="space-between"
     >
-      <UnorderedList listStyleType="none" marginLeft="6px">
+      <UnorderedList listStyleType="none" marginLeft="3px">
         <ListItem>
           <NextLink href="/">
             <Link

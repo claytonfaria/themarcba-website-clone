@@ -36,7 +36,7 @@ export default function Custom404({ colorScheme }) {
             color: colorMode === 'dark' ? 'black' : 'white',
           }}
         >
-          <Icon as={FaArrowLeft} marginRight="4px" /> Return Home
+          <Icon as={FaArrowLeft} marginRight="4px" /> Go home
         </Button>
       </NextLink>
     </Flex>
