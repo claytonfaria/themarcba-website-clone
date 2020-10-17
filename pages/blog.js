@@ -1,7 +1,7 @@
 import { Heading, Text, Box, Flex, Link, Icon } from '@chakra-ui/core';
 import { FaTwitter } from 'react-icons/fa';
 
-import BlogConstruction from '../components/svg/blogConstruction';
+import { BlogConstruction } from '../components/svg';
 
 export default function Contact({ colorScheme }) {
   const { primaryTextColor, highlightColor } = colorScheme;

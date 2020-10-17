@@ -1,8 +1,7 @@
 import { Heading, Icon, Text, Box } from '@chakra-ui/core';
 import { FiFeather } from 'react-icons/fi';
 
-import CardsWrapper from '../components/cardsWrapper';
-import DisplayCard from '../components/displayCard';
+import { CardsWrapper, DisplayCard } from '../components/projects';
 
 export default function Projects({ colorScheme, projects }) {
   const { primaryTextColor } = colorScheme;

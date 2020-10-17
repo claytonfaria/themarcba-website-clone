@@ -4,12 +4,13 @@ import {
   Container,
   Flex,
 } from '@chakra-ui/core';
-import Head from 'next/head';
 import { cloneElement } from 'react';
 
-import { projects } from '../data/projects.json';
+import { projects } from '../../data/projects.json';
+import BottomNavigation from './bottomNavigation';
 import Footer from './footer';
 import Header from './header';
+import pageMetadata from './pageMetadata';
 
 export default function Layout({ children }) {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -30,23 +31,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <title>{siteTitle}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Web Developer | Clayton Faria | JavaScript | React.js | Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <pageMetadata siteTitle={siteTitle} />
       <Header colorScheme={colorScheme} />
       <Flex direction="column" minHeight="90vh">
         <Container
@@ -57,6 +42,7 @@ export default function Layout({ children }) {
         >
           {cloneElement(children, { colorScheme, projects })}
         </Container>
+        <BottomNavigation colorScheme={colorScheme} />
         <Footer colorScheme={colorScheme} />
       </Flex>
     </>

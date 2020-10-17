@@ -13,8 +13,6 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-import BottomNavigation from './bottomNavigation';
-
 export default function Header({ colorScheme }) {
   const {
     colorMode,
@@ -148,7 +146,6 @@ export default function Header({ colorScheme }) {
           </Button>
         </NextLink>
       </HStack>
-      <BottomNavigation colorScheme={colorScheme} />
     </Flex>
   );
 }

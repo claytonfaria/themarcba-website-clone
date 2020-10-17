@@ -2,7 +2,7 @@ import { Heading, Text, Box, Flex, Link, HStack, Icon } from '@chakra-ui/core';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-import ContactSvg from '../components/svg/contactSvg';
+import { ContactSvg } from '../components/svg';
 
 export default function Contact({ colorScheme }) {
   const { primaryTextColor, highlightColor } = colorScheme;

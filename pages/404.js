@@ -2,7 +2,7 @@ import { Heading, Flex, Button, Icon } from '@chakra-ui/core';
 import NextLink from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
-import NotFoundSvg from '../components/svg/notFoundSvg';
+import { NotFoundSvg } from '../components/svg';
 
 export default function Custom404({ colorScheme }) {
   const { highlightColor, colorMode } = colorScheme;

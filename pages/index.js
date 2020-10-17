@@ -2,9 +2,8 @@ import { Box, Heading, Icon, Text, Divider } from '@chakra-ui/core';
 import { FaHeart } from 'react-icons/fa';
 import { FiFeather } from 'react-icons/fi';
 
-import CardsWrapper from '../components/cardsWrapper';
-import DisplayCard from '../components/displayCard';
-import HeroSvg from '../components/svg/heroSvg';
+import { CardsWrapper, DisplayCard } from '../components/projects';
+import { HeroSvg } from '../components/svg';
 import styles from '../styles/home.module.css';
 
 export default function Home({ colorScheme, projects }) {
