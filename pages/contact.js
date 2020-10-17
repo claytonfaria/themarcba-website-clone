@@ -18,7 +18,7 @@ export default function Contact({ colorScheme }) {
       >
         Let's talk 😊
       </Heading>
-      <Flex direction={['column', 'row']}>
+      <Flex direction={['column', 'column', 'row']}>
         <Box flex="1 0%">
           <ContactSvg color={highlightColor} />
         </Box>
