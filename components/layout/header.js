@@ -74,7 +74,7 @@ export default function Header() {
         fontWeight="700"
         textColor={menuTextColor}
         fontSize="1.2rem"
-        spacing={4}
+        spacing={5}
         cursor="pointer"
       >
         <ListItem>
