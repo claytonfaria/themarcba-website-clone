@@ -71,7 +71,7 @@ export default function DisplayCard({ colorScheme, item }) {
         marginTop="-2.5rem"
         borderRadius=".5rem"
         background={cardBgColor}
-        boxShadow="0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05)"
+        boxShadow="lg"
         display="flex"
         flexDirection="column"
         justifyContent="center"
