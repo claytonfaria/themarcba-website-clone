@@ -2,7 +2,7 @@ import { Heading, Flex, Button, Icon } from '@chakra-ui/core';
 import NextLink from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 
-import { NotFoundSvg } from '../components/svg';
+import { NotFoundArt } from '../assets/illustrations';
 import { useCustomColors } from '../context/colorContext';
 
 export default function Custom404() {
@@ -10,7 +10,7 @@ export default function Custom404() {
 
   return (
     <Flex direction="column" justifyContent="center" alignItems="center">
-      <NotFoundSvg color={highlightColor} />
+      <NotFoundArt />
       <Heading as="h1" fontSize="43px" lineHeight="1.5" fontWeight="600">
         Page Not Found!
       </Heading>

@@ -2,7 +2,7 @@ import { Icon, Container } from '@chakra-ui/core';
 
 import { useCustomColors } from '../../context/colorContext';
 
-export default function HeroSvg({ color, marginTop }) {
+export default function HeroArt() {
   const { highlightColor } = useCustomColors();
   return (
     <Container

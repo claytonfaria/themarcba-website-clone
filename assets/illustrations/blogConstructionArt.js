@@ -2,7 +2,7 @@ import { Icon, Container } from '@chakra-ui/core';
 
 import { useCustomColors } from '../../context/colorContext';
 
-export default function BlogConstruction() {
+export default function BlogConstructionArt() {
   const { highlightColor } = useCustomColors();
   return (
     <Container

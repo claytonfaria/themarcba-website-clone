@@ -1,7 +1,7 @@
 import { Heading, Text, Box, Flex, Link, Icon } from '@chakra-ui/core';
 import { FaTwitter } from 'react-icons/fa';
 
-import { BlogConstruction } from '../components/svg';
+import { BlogConstructionArt } from '../assets/illustrations';
 import { useCustomColors } from '../context/colorContext';
 
 export default function Contact() {
@@ -20,7 +20,7 @@ export default function Contact() {
       </Heading>
       <Flex direction={['column', 'column', 'row']}>
         <Box flex="1 0%">
-          <BlogConstruction color={highlightColor} />
+          <BlogConstructionArt />
         </Box>
         <Box flex="1 0%" alignSelf="center">
           <Text

@@ -1,11 +1,19 @@
-import { Box, Heading, Image, Flex, Text, Icon } from '@chakra-ui/core';
-import { FaLaptopCode } from 'react-icons/fa';
+import {
+  Box,
+  Heading,
+  Image,
+  Flex,
+  Text,
+  Icon,
+  Divider,
+} from '@chakra-ui/core';
+import { FaLaptopCode, FaTools, FaGraduationCap } from 'react-icons/fa';
 
 import WorkExperience from '../components/about/workExperience';
 import { useCustomColors } from '../context/colorContext';
 
 export default function About() {
-  const { primaryTextColor } = useCustomColors();
+  const { primaryTextColor, colorMode } = useCustomColors();
 
   return (
     <Box>
@@ -79,6 +87,101 @@ export default function About() {
           position: 'Freelancing',
         }}
       />
+      <Divider orientation="horizontal" marginY="4rem" />
+      <Heading
+        as="h1"
+        marginTop="2rem"
+        marginBottom=".5rem"
+        fontSize="2rem"
+        fontWeight="700"
+      >
+        Tech skills <Icon verticalAlign="-15%" fontSize="2rem" as={FaTools} />
+      </Heading>
+      <Flex justifyContent="center" flexWrap="wrap">
+        <Box
+          margin="1rem"
+          borderRadius=".5rem"
+          background={colorMode === 'dark' && 'white'}
+        >
+          <Image
+            src="/images/skills/javascript.svg"
+            maxWidth="8rem"
+            height="4rem"
+            margin="1rem"
+          />
+        </Box>
+        <Box
+          margin="1rem"
+          borderRadius=".5rem"
+          background={colorMode === 'dark' && 'white'}
+        >
+          <Image
+            src="/images/skills/css.svg"
+            maxWidth="8rem"
+            height="4rem"
+            margin="1rem"
+          />
+        </Box>
+        <Box
+          margin="1rem"
+          borderRadius=".5rem"
+          background={colorMode === 'dark' && 'white'}
+        >
+          <Image
+            src="/images/skills/html.svg"
+            maxWidth="8rem"
+            height="4rem"
+            margin="1rem"
+          />
+        </Box>
+        <Box
+          margin="1rem"
+          borderRadius=".5rem"
+          background={colorMode === 'dark' && 'white'}
+        >
+          <Image
+            src="/images/skills/react.svg"
+            maxWidth="8rem"
+            height="4rem"
+            marginY="1rem"
+          />
+        </Box>
+        <Box
+          margin="1rem"
+          borderRadius=".5rem"
+          background={colorMode === 'dark' && 'white'}
+        >
+          <Image
+            src="/images/skills/nextjs.svg"
+            maxWidth="8rem"
+            height="4rem"
+            margin="1rem"
+          />
+        </Box>
+        <Box
+          margin="1rem"
+          borderRadius=".5rem"
+          background={colorMode === 'dark' && 'white'}
+        >
+          <Image
+            src="/images/skills/node.svg"
+            maxWidth="8rem"
+            height="4rem"
+            margin="1rem"
+          />
+        </Box>
+      </Flex>
+      <Divider orientation="horizontal" marginY="4rem" />
+      <Heading
+        as="h1"
+        marginTop="2rem"
+        marginBottom=".5rem"
+        fontSize="2rem"
+        fontWeight="700"
+      >
+        Education{' '}
+        <Icon verticalAlign="-20%" fontSize="2.2rem" as={FaGraduationCap} />
+      </Heading>
     </Box>
   );
 }

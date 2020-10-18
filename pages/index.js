@@ -2,8 +2,8 @@ import { Box, Heading, Icon, Text, Divider } from '@chakra-ui/core';
 import { FaHeart } from 'react-icons/fa';
 import { FiFeather } from 'react-icons/fi';
 
+import { HeroArt } from '../assets/illustrations';
 import { CardsWrapper, DisplayCard } from '../components/projects';
-import { HeroSvg } from '../components/svg';
 import { useCustomColors } from '../context/colorContext';
 import styles from '../styles/home.module.css';
 
@@ -33,7 +33,7 @@ export default function Home({ projects }) {
         web development
       </Heading>
 
-      <HeroSvg />
+      <HeroArt />
       <Text
         fontSize="1.2rem"
         marginBottom="2rem"

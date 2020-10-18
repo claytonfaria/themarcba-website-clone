@@ -2,7 +2,7 @@ import { Heading, Text, Box, Flex, Link, HStack, Icon } from '@chakra-ui/core';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-import { ContactSvg } from '../components/svg';
+import { ContactArt } from '../assets/illustrations';
 import { useCustomColors } from '../context/colorContext';
 
 export default function Contact() {
@@ -21,7 +21,7 @@ export default function Contact() {
       </Heading>
       <Flex direction={['column', 'column', 'row']}>
         <Box flex="1 0%">
-          <ContactSvg color={highlightColor} />
+          <ContactArt />
         </Box>
         <Box flex="1 0%">
           <Text
