@@ -31,7 +31,7 @@ export default function Projects({ projects }) {
 
       <CardsWrapper>
         {projects
-          .sort((a, b) => b.id - a.id)
+          // .sort((a, b) => b.id - a.id)
           .map((item) => (
             <DisplayCard item={item} key={item.id} />
           ))}

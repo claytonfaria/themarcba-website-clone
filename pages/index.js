@@ -1,4 +1,4 @@
-import { Box, Heading, Icon, Text, Divider } from '@chakra-ui/core';
+import { Box, Heading, Icon, Text, Divider, Link } from '@chakra-ui/core';
 import { FaHeart } from 'react-icons/fa';
 import { FiFeather } from 'react-icons/fi';
 
@@ -7,8 +7,10 @@ import { CardsWrapper, DisplayCard } from '../components/projects';
 import { useCustomColors } from '../context/colorContext';
 import styles from '../styles/home.module.css';
 
+import NextLink from 'next/link';
+
 export default function Home({ projects }) {
-  const { primaryTextColor } = useCustomColors();
+  const { primaryTextColor, highlightColor } = useCustomColors();
 
   return (
     <Box width="100%" marginTop="1.5rem">
@@ -41,10 +43,11 @@ export default function Home({ projects }) {
         textColor={primaryTextColor}
         fontWeight="500"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cupiditate
-        fuga est autem ab labore? Tempore similique cumque neque obcaecati
-        nesciunt, dicta autem! Natus, iste sapiente nihil debitis blanditiis
-        saepe.
+        I am a brazilian 🇧🇷 <strong>web developer</strong> living in awesome
+        Taiwan 🇹🇼, the Heart of Asia. I mostly code with{' '}
+        <strong>JavaScript</strong>
+        (React.js/Next.js & Node.js), but have also some experience with Python
+        and others.
       </Text>
       <Text
         fontSize="1.2rem"
@@ -53,8 +56,19 @@ export default function Home({ projects }) {
         textColor={primaryTextColor}
         fontWeight="500"
       >
-        If you have any web development needs, feel free to contact or get to
-        know me a little better.
+        If you have any web development needs, feel free to{' '}
+        <NextLink href="/contact">
+          <Link color={highlightColor} fontWeight="600">
+            contact{' '}
+          </Link>
+        </NextLink>
+        or{' '}
+        <NextLink href="/about">
+          <Link color={highlightColor} fontWeight="600">
+            get to know{' '}
+          </Link>
+        </NextLink>{' '}
+        me a little better.
       </Text>
       <Divider orientation="horizontal" marginY="4rem" />
       <Heading
@@ -79,7 +93,6 @@ export default function Home({ projects }) {
       <CardsWrapper>
         {projects
           .filter((item) => item.featured)
-          .sort((a, b) => b.id - a.id)
           .map((item) => (
             <DisplayCard item={item} key={item.id} />
           ))}

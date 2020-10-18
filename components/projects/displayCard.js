@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 import { useCustomColors } from '../../context/colorContext';
 
 export default function DisplayCard({ item }) {
-  const { title, date, description, tags, imgUrl, reporUrl } = item;
+  const { title, date, description, tags, imgUrl, repoUrl, liveUrl } = item;
 
   const { highlightColor, primaryTextColor } = useCustomColors();
 
@@ -57,8 +57,9 @@ export default function DisplayCard({ item }) {
       whileTap="tap"
     >
       <MotionImage
-        src="/image1.png"
+        src={imgUrl}
         height="auto"
+        maxHeight="250px"
         width="100%"
         objectFit="cover"
         borderRadius=".5rem"
@@ -116,7 +117,7 @@ export default function DisplayCard({ item }) {
         <Flex alignItems="center" justifyContent="center" marginTop="1.5rem">
           <ButtonGroup spacing={4}>
             <Link
-              href="https://github.com/vercel/next.js"
+              href={liveUrl}
               isExternal
               _hover={{
                 textDecoration: 'none',
@@ -136,12 +137,13 @@ export default function DisplayCard({ item }) {
                   bg: highlightColor,
                   color: colorMode === 'dark' ? 'black' : 'white',
                 }}
+                isDisabled={!liveUrl}
               >
                 Live
               </Button>
             </Link>
             <Link
-              href="https://github.com/vercel/next.js"
+              href={repoUrl}
               isExternal
               _hover={{
                 textDecoration: 'none',
