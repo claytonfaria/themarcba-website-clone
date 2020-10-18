@@ -83,13 +83,13 @@ export default function DisplayCard({ item }) {
         justifyContent="center"
         variants={boxMotion}
       >
-        <Flex wrap="wrap">
+        <Flex>
           {tags.map((tag, index) => (
             <Text
               key={index}
               paddingX=".5rem"
               paddingY="0"
-              marginRight=".5rem"
+              // marginRight=".5rem"
               marginBottom=".25rem"
               fontSize="1rem"
               fontWeight="550"

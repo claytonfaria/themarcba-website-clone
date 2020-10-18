@@ -1,4 +1,5 @@
 import { Box, Heading, Icon, Text, Divider, Link } from '@chakra-ui/core';
+import NextLink from 'next/link';
 import { FaHeart } from 'react-icons/fa';
 import { FiFeather } from 'react-icons/fi';
 
@@ -6,8 +7,6 @@ import { HeroArt } from '../assets/illustrations';
 import { CardsWrapper, DisplayCard } from '../components/projects';
 import { useCustomColors } from '../context/colorContext';
 import styles from '../styles/home.module.css';
-
-import NextLink from 'next/link';
 
 export default function Home({ projects }) {
   const { primaryTextColor, highlightColor } = useCustomColors();
