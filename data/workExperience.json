@@ -1,0 +1,25 @@
+{
+  "workExperience": [
+    {
+      "id": 1,
+      "dateAndCountry": "2009 - 2016 - Brazil 🇧🇷",
+      "title": "Product Manager",
+      "organization": "GIGABYTE Technology Brazil",
+      "featured": false
+    },
+    {
+      "id": 2,
+      "dateAndCountry": "2017 - 2019 - Taiwan 🇹🇼",
+      "title": "Product Manager",
+      "organization": "GIGABYTE Technology Taiwan",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "dateAndCountry": "2020 - current - Taiwan 🇹🇼",
+      "title": "Freelancing",
+      "organization": "Clayton Faria Consulting",
+      "featured": true
+    }
+  ]
+}

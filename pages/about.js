@@ -16,8 +16,13 @@ import {
   FaUserTie,
 } from 'react-icons/fa';
 
-import InfoSummary from '../components/about/infoSummary';
+import {
+  HistoryDisplay,
+  LanguageSkills,
+  TechSkills,
+} from '../components/about';
 import { useCustomColors } from '../context/colorContext';
+import { education, workExperience } from '../data';
 
 export default function About() {
   const { primaryTextColor, colorMode } = useCustomColors();
@@ -77,209 +82,29 @@ export default function About() {
           </Text>
         </Box>
       </Flex>
-      <Heading
-        as="h1"
-        marginTop="2rem"
-        marginBottom=".5rem"
-        fontSize="2rem"
-        fontWeight="700"
-      >
-        Work experience{' '}
-        <Icon verticalAlign="-15%" fontSize="2.2rem" as={FaLaptopCode} />
-      </Heading>
-      <InfoSummary
-        details={{
-          organization: 'Clayton Faria Labs',
-          dateAndCountry: 'July 2017 - Current · Taipei ',
-          title: 'Freelancing',
-          featured: true,
-        }}
+
+      {/* Work Experience */}
+      <HistoryDisplay
+        icon={FaLaptopCode}
+        data={workExperience}
+        title="Work Experience"
       />
       <Divider orientation="horizontal" marginY="4rem" />
-      <Heading
-        as="h1"
-        marginTop="2rem"
-        marginBottom=".5rem"
-        fontSize="2rem"
-        fontWeight="700"
-      >
-        Tech skills <Icon verticalAlign="-15%" fontSize="2rem" as={FaTools} />
-      </Heading>
-      <Flex justifyContent="center" flexWrap="wrap">
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/javascript.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/css.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/html.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/react.svg"
-            maxWidth="8rem"
-            height="4rem"
-            marginY="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/nextjs.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/node.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/python.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/pandas.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-      </Flex>
+
+      {/* Tech Skills */}
+      <TechSkills icon={FaTools} colorMode={colorMode} />
+
       <Divider orientation="horizontal" marginY="4rem" />
-      <Heading
-        as="h1"
-        marginTop="2rem"
-        marginBottom=".5rem"
-        fontSize="2rem"
-        fontWeight="700"
-      >
-        Education{' '}
-        <Icon verticalAlign="-20%" fontSize="2.2rem" as={FaGraduationCap} />
-      </Heading>
-      <InfoSummary
-        details={{
-          organization: 'JavaScript, React.js, Next.js & others',
-          dateAndCountry: 'May 2020 - Current · Taipei ',
-          title: 'Self-Learning',
-          featured: true,
-        }}
+
+      {/* Education */}
+      <HistoryDisplay
+        icon={FaGraduationCap}
+        data={education}
+        title="Education"
       />
-      <Heading
-        as="h1"
-        marginTop="2rem"
-        marginBottom=".5rem"
-        fontSize="2rem"
-        fontWeight="700"
-      >
-        Language skills{' '}
-        <Icon verticalAlign="-20%" fontSize="2.2rem" as={FaLanguage} />
-      </Heading>
-      <table
-        style={{
-          marginTop: '0.8rem',
-          fontSize: '1.2rem',
-          borderCollapse: 'collapse',
-          color: primaryTextColor,
-        }}
-      >
-        <tr>
-          <td
-            style={{
-              fontWeight: '700',
-              paddingRight: '1rem',
-              paddingTop: '0.5rem',
-              paddingBottom: '0.5rem',
-            }}
-          >
-            English
-          </td>
-          <td
-            style={{
-              fontWeight: '500',
-              paddingRight: '1rem',
-              paddingLeft: '1rem',
-              paddingTop: '0.5rem',
-              paddingBottom: '0.5rem',
-            }}
-          >
-            Fluent
-          </td>
-        </tr>
-        <tr>
-          <td style={{ fontWeight: '700', paddingRight: '1rem' }}>
-            Portuguese
-          </td>
-          <td
-            style={{
-              fontWeight: '500',
-              paddingRight: '1rem',
-              paddingLeft: '1rem',
-              paddingTop: '0.5rem',
-              paddingBottom: '0.5rem',
-            }}
-          >
-            Mothertongue
-          </td>
-        </tr>
-      </table>
+
+      {/* Language Skills */}
+      <LanguageSkills icon={FaLanguage} color={primaryTextColor} />
 
       <Heading
         as="h1"

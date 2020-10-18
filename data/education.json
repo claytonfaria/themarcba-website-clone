@@ -1,0 +1,46 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "dateAndCountry": "2006 - 2009 - Brazil 🇧🇷",
+      "title": "Bachelor`s Degree - International Business",
+      "organization": "Universidade Paulista",
+      "featured": false
+    },
+    {
+      "id": 2,
+      "dateAndCountry": "2010 - 2011 - Brazil 🇧🇷",
+      "title": "Graduate Studies - Business Administration",
+      "organization": "FGV - Fundação Getulio Vargas",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "dateAndCountry": "2012 - USA - 🇺🇸",
+      "title": "Graduate Studies Extension - International Business",
+      "organization": "University of Miami Business School",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "dateAndCountry": "2017 - 2018 - Taiwan 🇹🇼",
+      "title": "Chinese Language",
+      "organization": "National Taiwan Normal University",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "dateAndCountry": "May 2020 - Aug 2020 - Taiwan 🇹🇼",
+      "title": "Data Science Specilization",
+      "organization": "IBM Coursera",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "dateAndCountry": "Jan 2020 - Current - Taiwan 🇹🇼",
+      "title": "Self-Learning",
+      "organization": "JavaScript, React.js, Next.js, Node.js, Python",
+      "featured": true
+    }
+  ]
+}
