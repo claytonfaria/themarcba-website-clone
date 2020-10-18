@@ -2,9 +2,9 @@ import { Box, Heading, Flex, Text } from '@chakra-ui/core';
 
 import { useCustomColors } from '../../context/colorContext';
 
-export default function WorkExperience({ employment }) {
+export default function InfoSummary({ details }) {
   const { highlightColor, primaryTextColor } = useCustomColors();
-  const { dateAndCountry, position, company } = employment;
+  const { dateAndCountry, title, organization, featured } = details;
   return (
     <>
       <Flex direction="column" marginTop="0.8rem" marginBottom="1.4rem">
@@ -24,7 +24,9 @@ export default function WorkExperience({ employment }) {
               borderWidth="2px"
               borderRadius="full"
               borderColor={highlightColor}
-              animation="ping 1s cubic-bezier(0, 0, 0.2, 1) infinite"
+              animation={`${
+                featured && 'ping'
+              } 1s cubic-bezier(0, 0, 0.2, 1) infinite`}
             />
             <Box
               width="1rem"
@@ -40,13 +42,13 @@ export default function WorkExperience({ employment }) {
             <Text fontWeight="500" textColor={primaryTextColor}>
               {dateAndCountry}
             </Text>
-            <Heading fontSize="1.4rem">{position}</Heading>
+            <Heading fontSize="1.4rem">{title}</Heading>
             <Text
               textColor={primaryTextColor}
               fontWeight="700"
               fontSize="1.2rem"
             >
-              {company}
+              {organization}
             </Text>
           </Box>
         </Flex>
