@@ -1,7 +1,7 @@
 import { Container, Flex } from '@chakra-ui/core';
 import { cloneElement } from 'react';
 
-import { projects } from '../../data/projects.json';
+import { projects } from '../../data';
 import BottomNavigation from './bottomNavigation';
 import Footer from './footer';
 import Header from './header';

@@ -1,5 +1,7 @@
 import { Box, Heading, Image, Flex, Icon } from '@chakra-ui/core';
 
+import { techSkills } from '../../data';
+
 export default function TechSkills({ icon, colorMode }) {
   return (
     <>
@@ -13,103 +15,27 @@ export default function TechSkills({ icon, colorMode }) {
         Tech skills <Icon verticalAlign="-15%" fontSize="2rem" as={icon} />
       </Heading>
       <Flex justifyContent="center" flexWrap="wrap">
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/javascript.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
+        {techSkills.map((skill, index) => (
+          <Skill
+            colorMode={colorMode}
+            src={`/images/skills/${skill.toLowerCase()}.svg`}
+            alt={skill}
+            key={skill[index]}
           />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/css.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/html.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/react.svg"
-            maxWidth="8rem"
-            height="4rem"
-            marginY="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/nextjs.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/node.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/python.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
-        <Box
-          margin="1rem"
-          borderRadius=".5rem"
-          background={colorMode === 'dark' && 'white'}
-        >
-          <Image
-            src="/images/skills/pandas.svg"
-            maxWidth="8rem"
-            height="4rem"
-            margin="1rem"
-          />
-        </Box>
+        ))}
       </Flex>
     </>
+  );
+}
+
+function Skill({ colorMode, src, alt }) {
+  return (
+    <Box
+      margin="1rem"
+      borderRadius=".5rem"
+      background={colorMode === 'dark' && 'white'}
+    >
+      <Image src={src} alt={alt} maxWidth="8rem" height="4rem" margin="1rem" />
+    </Box>
   );
 }
