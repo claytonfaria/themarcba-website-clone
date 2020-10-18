@@ -31,15 +31,15 @@
     {
       "id": 5,
       "dateAndCountry": "May 2020 - Aug 2020 - Taiwan 🇹🇼",
-      "title": "Data Science Specilization",
+      "title": "Data Science Specialization",
       "organization": "IBM Coursera",
-      "featured": true
+      "featured": false
     },
     {
       "id": 6,
       "dateAndCountry": "Jan 2020 - Current - Taiwan 🇹🇼",
-      "title": "Self-Learning",
-      "organization": "JavaScript, React.js, Next.js, Node.js, Python",
+      "title": "JavaScript, React.js, Next.js, Node.js, Python & others",
+      "organization": "Self-Learning",
       "featured": true
     }
   ]

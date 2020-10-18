@@ -3,22 +3,22 @@
     {
       "id": 1,
       "dateAndCountry": "2009 - 2016 - Brazil 🇧🇷",
-      "title": "Product Manager",
+      "title": "Motherboard Product Manager",
       "organization": "GIGABYTE Technology Brazil",
       "featured": false
     },
     {
       "id": 2,
       "dateAndCountry": "2017 - 2019 - Taiwan 🇹🇼",
-      "title": "Product Manager",
+      "title": "Components Product Manager",
       "organization": "GIGABYTE Technology Taiwan",
       "featured": false
     },
     {
       "id": 3,
       "dateAndCountry": "2020 - Current - Taiwan 🇹🇼",
-      "title": "Freelancing",
-      "organization": "Clayton Faria Consulting",
+      "title": "Full-time Web Development Student",
+      "organization": "Self-Learning",
       "featured": true
     }
   ]

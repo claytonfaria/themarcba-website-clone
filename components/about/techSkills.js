@@ -20,7 +20,7 @@ export default function TechSkills({ icon, colorMode }) {
             colorMode={colorMode}
             src={`/images/skills/${skill.toLowerCase()}.svg`}
             alt={skill}
-            key={skill[index]}
+            key={index}
           />
         ))}
       </Flex>

@@ -21,10 +21,12 @@ export default function LanguageSkills({ color, icon }) {
           marginTop: '0.8rem',
         }}
       >
-        <Languages language="English 🇺🇸" level="Fluent" />
-        <Languages language="Portuguese 🇧🇷" level="Mothertongue" />
-        <Languages language="Chinese 🇹🇼" level="Advanced" />
-        <Languages language="Spanish 🇪🇸" level="Basic" />
+        <tbody>
+          <Languages language="English 🇺🇸" level="Fluent" />
+          <Languages language="Portuguese 🇧🇷" level="Mothertongue" />
+          <Languages language="Chinese 🇹🇼" level="Advanced" />
+          <Languages language="Spanish 🇪🇸" level="Basic" />
+        </tbody>
       </table>
     </>
   );

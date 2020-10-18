@@ -57,7 +57,7 @@ export default function About() {
             fontWeight="700"
             marginBottom=".5rem"
           >
-            Hello
+            Hello 👋
           </Heading>
           <Text
             fontSize="1.2rem"
@@ -66,10 +66,12 @@ export default function About() {
             textColor={primaryTextColor}
             fontWeight="500"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-            molestias non nihil tenetur, dicta obcaecati velit reiciendis
-            recusandae molestiae ab a reprehenderit harum error voluptatibus
-            dolores facere est commodi fuga.
+            Hi, I'm Clayton, a <strong>web developer </strong>with a diverse
+            technology experience, for years I managed lauching of several PC
+            components. Currently, I am focused on developing with JavaScript,
+            mostly
+            <strong> React.js / Next.js </strong>in the Front End and Node.js,
+            Express for Back End.
           </Text>
         </Box>
       </Flex>
