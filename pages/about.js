@@ -37,10 +37,10 @@ export default function About() {
           alignSelf="center"
           position="relative"
           borderRadius="full"
-          border="2px"
+          // border="2px"
         >
           <Image
-            src="/profile-big.jpeg"
+            src="/images/profile-big.jpg"
             alt="Clayton Faria profile picture"
             objectFit="cover"
             height="100%"
@@ -66,9 +66,9 @@ export default function About() {
             textColor={primaryTextColor}
             fontWeight="500"
           >
-            Hi, I'm Clayton, a <strong>web developer </strong>with a diverse
-            technology experience, for years I managed lauching of several PC
-            components. Currently, I am focused on developing with JavaScript,
+            Hi, I'm Clayton, a <strong>web developer </strong>💻 with a diverse
+            technology experience. For years I managed lauching of several PC
+            components, currently I am focused on developing with JavaScript,
             mostly
             <strong> React.js / Next.js </strong>in the Front End and Node.js,
             Express for Back End.

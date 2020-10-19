@@ -7,7 +7,6 @@ import {
   Button,
   ButtonGroup,
   Link,
-  colorMode,
   chakra,
 } from '@chakra-ui/core';
 import { motion } from 'framer-motion';
@@ -15,9 +14,18 @@ import { motion } from 'framer-motion';
 import { useCustomColors } from '../../context/colorContext';
 
 export default function DisplayCard({ item }) {
-  const { title, date, description, tags, imgUrl, repoUrl, liveUrl } = item;
+  const {
+    title,
+    date,
+    description,
+    tags,
+    imgUrl,
+    repoUrl,
+    liveUrl,
+    subtitle,
+  } = item;
 
-  const { highlightColor, primaryTextColor } = useCustomColors();
+  const { highlightColor, primaryTextColor, colorMode } = useCustomColors();
 
   const cardBgColor = useColorModeValue('white', '#0d1131');
   const tagBgColor = useColorModeValue('white', 'black');
@@ -56,17 +64,32 @@ export default function DisplayCard({ item }) {
       whileHover="hover"
       whileTap="tap"
     >
-      <MotionImage
+      {/* <MotionImage
         src={imgUrl}
-        height="auto"
-        maxHeight="250px"
+        height="230px"
         width="100%"
+        boxShadow="lg"
         objectFit="cover"
         borderRadius=".5rem"
         alt="post image"
         variants={imageMotion}
         pointerEvents="none"
-      />
+      /> */}
+      <MotionBox
+        height="250px"
+        width="100%"
+        borderRadius=".5rem"
+        alt="post image"
+        variants={imageMotion}
+        pointerEvents="none"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        background={colorMode === 'light' ? '#070919' : 'white'}
+        color={colorMode === 'light' ? '#00c58e' : '#3c31e8'}
+      >
+        <Heading>{title}</Heading>
+      </MotionBox>
       <MotionBox
         zIndex="10"
         maxWidth="91%"
@@ -102,7 +125,7 @@ export default function DisplayCard({ item }) {
           ))}
         </Flex>
         <Heading fontSize="1.4rem" marginTop=".5rem" lineHeight="1.5">
-          {title}
+          {subtitle}
         </Heading>
         <Text
           fontSize=".8rem"

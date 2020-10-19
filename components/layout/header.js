@@ -42,7 +42,7 @@ export default function Header() {
             >
               <Image
                 boxSize="38px"
-                src="/profile.webp"
+                src="/images/profile.jpg"
                 fallbackSrc="/profile.webp"
                 objectFit="contain"
                 alt="profile picture"

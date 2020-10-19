@@ -3,17 +3,19 @@
     {
       "id": 1,
       "title": "MarketNews",
+      "subtitle": "Financial Market Information",
       "date": "October 2020",
-      "description": "A responsive website that provides news, financial market information and advanced charting tools",
+      "description": "A responsive website that provides news, updated quotation and advanced charting tools",
       "tags": ["Next.js", "React.js", "Bootstrap"],
-      "imgUrl": "/images/projects/marketnews.png",
+      "imgUrl": "/images/projects/marketnews2.png",
       "liveUrl": "https://marketnews-next.vercel.app/",
       "repoUrl": "https://github.com/claytonfaria/market-news-nextJS",
       "featured": true
     },
     {
       "id": 2,
-      "title": "Personal Website",
+      "title": "Clayton Faria",
+      "subtitle": "Personal Website",
       "date": "October 2020",
       "description": "My first portfolio website, this one you are browsing, you may check the code to know more how I made it",
       "tags": ["Next.js", "React.js", "Chakra-ui"],
@@ -21,17 +23,6 @@
       "liveUrl": "",
       "repoUrl": "https://github.com/claytonfaria/claytonfaria.dev",
       "featured": true
-    },
-    {
-      "id": 3,
-      "title": "Alien Invasion",
-      "date": "July 2020",
-      "description": "Alien Invasion game created in Python. Very simple game, but learned a lot during coding and book guidance",
-      "tags": ["Python", "Pygame"],
-      "imgUrl": "/images/projects/alieninvasion.png",
-      "liveUrl": "",
-      "repoUrl": "https://github.com/claytonfaria/Alien_Invasion",
-      "featured": false
     }
   ]
 }
