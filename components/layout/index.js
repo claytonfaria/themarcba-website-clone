@@ -12,7 +12,7 @@ export default function Layout({ children, router }) {
   const MotionContainer = motion.custom(Container);
 
   const siteTitle =
-    'Web Developer | Clayton Faria | JavaScript | React.js, Next.js, Node.js';
+    'Web Developer | Clayton Faria | JavaScript | React.js | Next.js | Node.js';
 
   const pageTransitionAnimation = {
     pageAnimate: {
@@ -20,6 +20,9 @@ export default function Layout({ children, router }) {
     },
     pageInitial: {
       opacity: 0,
+    },
+    transition: {
+      duration: 0.5,
     },
   };
 
@@ -37,6 +40,7 @@ export default function Layout({ children, router }) {
           key={router.route}
           initial="pageInitial"
           animate="pageAnimate"
+          transition="transition"
           variants={pageTransitionAnimation}
         >
           {cloneElement(children, { projects })}
