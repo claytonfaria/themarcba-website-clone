@@ -140,7 +140,7 @@ export default function DisplayCard({ item }) {
         <Flex alignItems="center" justifyContent="center" marginTop="1.5rem">
           <ButtonGroup spacing={4}>
             <Link
-              href={liveUrl}
+              href={liveUrl ? liveUrl : '/'}
               isExternal
               _hover={{
                 textDecoration: 'none',
