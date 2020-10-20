@@ -1,6 +1,6 @@
-# claytonfaria.dev
+Marc Backes website clone built with Next.js, Chakra UI, and Vercel
 
-My portfolio built with Next.js, Chakra UI, and Vercel.
+created for learning Next.js purposes, original here - https://marc.dev/
 
 ## Running Locally
 
