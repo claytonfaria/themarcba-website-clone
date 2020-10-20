@@ -22,7 +22,7 @@ export default function DisplayCard({ item }) {
     imgUrl,
     repoUrl,
     liveUrl,
-    subtitle,
+    fallbackImgUrl,
   } = item;
 
   const { highlightColor, primaryTextColor, colorMode } = useCustomColors();
@@ -66,7 +66,10 @@ export default function DisplayCard({ item }) {
     >
       <MotionImage
         src={imgUrl}
+        fallbackSrc={fallbackImgUrl}
         height="230px"
+        htmlHeight="230"
+        htmlWidth="400"
         width="100%"
         boxShadow="lg"
         objectFit="cover"

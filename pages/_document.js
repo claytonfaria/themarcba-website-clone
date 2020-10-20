@@ -10,10 +10,12 @@ class MyDocument extends Document {
             rel="preload"
             href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&display=swap"
             as="style"
+            crossOrigin="anonymous"
           />
           <link
             href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&display=swap"
             rel="stylesheet"
+            crossOrigin="anonymous"
           />
         </Head>
         <body>

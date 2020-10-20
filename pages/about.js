@@ -40,11 +40,14 @@ export default function About() {
           // border="2px"
         >
           <Image
-            src="/images/profile-big.jpg"
+            src="/images/profile-big.webp"
+            fallbackSrc="/images/profile-big.jpg"
             alt="Clayton Faria profile picture"
             objectFit="cover"
             height="100%"
             width="100%"
+            htmlHeight="192"
+            htmlWidth="192"
             position="absolute"
             top="0"
           />
