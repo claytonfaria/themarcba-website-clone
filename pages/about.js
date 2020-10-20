@@ -66,7 +66,7 @@ export default function About() {
             textColor={primaryTextColor}
             fontWeight="500"
           >
-            Hi, I'm Clayton, a <strong>web developer </strong>💻 with a diverse
+            I'm Clayton, a <strong>web developer </strong>💻 with a diverse
             technology experience. For years I successfully launched and managed
             several PC components, currently I am focused on developing with
             JavaScript, mostly

@@ -42,7 +42,7 @@ export default function Interests() {
         textColor={primaryTextColor}
         fontWeight="500"
       >
-        I'm interested to work in companies that use{' '}
+        I'm interested in working for companies that use{' '}
         <strong>
           modern technologies such as React, Next.js, Vue.js, Nuxt.js, Node.js,
         </strong>{' '}

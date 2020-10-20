@@ -31,8 +31,8 @@ export default function Contact() {
             textColor={primaryTextColor}
             fontWeight="500"
           >
-            Whether you are interested to do business, hire me or just want to
-            chat, I am happy to talk to you.
+            Whether you are interested in doing business, hiring me or just want
+            to chat, I am happy to talk to you.
           </Text>
           <Text
             fontSize="1.2rem"
