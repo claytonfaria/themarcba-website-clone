@@ -10,8 +10,8 @@ import {
   HistoryDisplay,
   LanguageSkills,
   TechSkills,
+  Interests,
 } from '../components/about';
-import Interests from '../components/about/interests';
 import { useCustomColors } from '../context/colorContext';
 import { education, workExperience } from '../data';
 
@@ -67,9 +67,9 @@ export default function About() {
             fontWeight="500"
           >
             Hi, I'm Clayton, a <strong>web developer </strong>💻 with a diverse
-            technology experience. For years I managed lauching of several PC
-            components, currently I am focused on developing with JavaScript,
-            mostly
+            technology experience. For years I successfully launched and managed
+            several PC components, currently I am focused on developing with
+            JavaScript, mostly
             <strong> React.js / Next.js </strong>in the Front End and Node.js,
             Express for Back End.
           </Text>

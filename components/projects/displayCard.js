@@ -2,7 +2,7 @@ import {
   Heading,
   useColorModeValue,
   Text,
-  Image,
+  // Image,
   Flex,
   Button,
   ButtonGroup,
@@ -19,7 +19,7 @@ export default function DisplayCard({ item }) {
     date,
     description,
     tags,
-    imgUrl,
+    // imgUrl,
     repoUrl,
     liveUrl,
     subtitle,
@@ -31,7 +31,7 @@ export default function DisplayCard({ item }) {
   const tagBgColor = useColorModeValue('white', 'black');
 
   const MotionBox = chakra(motion.div);
-  const MotionImage = motion.custom(Image);
+  // const MotionImage = motion.custom(Image);
 
   const imageMotion = {
     hover: {

@@ -2,11 +2,13 @@ import { Container, Flex } from '@chakra-ui/core';
 import { motion } from 'framer-motion';
 import { cloneElement } from 'react';
 
-import { projects } from '../../data';
-import BottomNavigation from './bottomNavigation';
-import Footer from './footer';
-import Header from './header';
-import PageMetadata from './pageMetadata';
+import {
+  BottomNavigation,
+  Footer,
+  Header,
+  PageMetadata,
+} from '../components/base';
+import { projects } from '../data';
 
 export default function Layout({ children, router }) {
   const MotionContainer = motion.custom(Container);
