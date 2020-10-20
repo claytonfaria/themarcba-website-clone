@@ -29,9 +29,11 @@ export default function Footer() {
     >
       <Flex alignItems="center" flexDirection="column">
         <Text display="flex" alignItems="center">
-          <Icon marginX="4px" as={FaCode} /> with
-          <Icon marginX="4px" textColor="red.600" as={FaHeart} />
-          by Clayton Faria &copy; 2020
+          This website is a clone of
+          <Link isExternal href="https://marc.dev/ " color={highlightColor}>
+            ** marc.dev **
+          </Link>
+          - All credits and design goes to Marc
         </Text>
         <Flex>
           <IconButton
