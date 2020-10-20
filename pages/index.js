@@ -45,8 +45,8 @@ export default function Home({ projects }) {
         I am a brazilian 🇧🇷 <strong>web developer</strong> living in awesome
         Taiwan 🇹🇼, the Heart of Asia. I mostly code with{' '}
         <strong>JavaScript</strong>
-        (React.js/Next.js & Node.js), but have also some experience with Python
-        and others.
+        (React.js/Next.js & Node.js), but I also have some experience with
+        Python and others.
       </Text>
       <Text
         fontSize="1.2rem"

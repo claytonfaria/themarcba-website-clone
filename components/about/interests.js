@@ -44,10 +44,9 @@ export default function Interests() {
       >
         I'm interested to work in companies that use{' '}
         <strong>
-          modern technologies such as React.js, Next.js, Vue.js, Nuxt.js,
-          Node.js,
+          modern technologies such as React, Next.js, Vue.js, Nuxt.js, Node.js,
         </strong>{' '}
-        and etc. I am looking for a role that that challenges and gives me
+        and etc. I am looking for a role that challenges and gives me
         opportunities to learn.
       </Text>
       <Heading
@@ -67,8 +66,8 @@ export default function Interests() {
         textColor={primaryTextColor}
         fontWeight="500"
       >
-        I love traveling, especially to Mountains or nature related. Beautiful
-        landscapes are one of the first thing I consider when planning to visit
+        I love traveling, especially to mountains and lakes. Beautiful
+        landscapes are one of the first things I consider when planning to visit
         somewhere.
       </Text>
       <Heading

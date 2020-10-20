@@ -2,7 +2,7 @@ import {
   Heading,
   useColorModeValue,
   Text,
-  // Image,
+  Image,
   Flex,
   Button,
   ButtonGroup,
@@ -19,7 +19,7 @@ export default function DisplayCard({ item }) {
     date,
     description,
     tags,
-    // imgUrl,
+    imgUrl,
     repoUrl,
     liveUrl,
     subtitle,
@@ -31,7 +31,7 @@ export default function DisplayCard({ item }) {
   const tagBgColor = useColorModeValue('white', 'black');
 
   const MotionBox = chakra(motion.div);
-  // const MotionImage = motion.custom(Image);
+  const MotionImage = motion.custom(Image);
 
   const imageMotion = {
     hover: {
@@ -64,7 +64,7 @@ export default function DisplayCard({ item }) {
       whileHover="hover"
       whileTap="tap"
     >
-      {/* <MotionImage
+      <MotionImage
         src={imgUrl}
         height="230px"
         width="100%"
@@ -74,8 +74,8 @@ export default function DisplayCard({ item }) {
         alt="post image"
         variants={imageMotion}
         pointerEvents="none"
-      /> */}
-      <MotionBox
+      />
+      {/* <MotionBox
         height="250px"
         width="100%"
         borderRadius=".5rem"
@@ -89,7 +89,7 @@ export default function DisplayCard({ item }) {
         color={colorMode === 'light' ? '#00c58e' : '#3c31e8'}
       >
         <Heading>{title}</Heading>
-      </MotionBox>
+      </MotionBox> */}
       <MotionBox
         zIndex="10"
         maxWidth="91%"
@@ -112,7 +112,7 @@ export default function DisplayCard({ item }) {
               key={index}
               paddingX=".5rem"
               paddingY="0"
-              // marginRight=".5rem"
+              marginRight=".5rem"
               marginBottom=".25rem"
               fontSize="1rem"
               fontWeight="550"
@@ -125,7 +125,7 @@ export default function DisplayCard({ item }) {
           ))}
         </Flex>
         <Heading fontSize="1.4rem" marginTop=".5rem" lineHeight="1.5">
-          {subtitle}
+          {title}
         </Heading>
         <Text
           fontSize=".8rem"

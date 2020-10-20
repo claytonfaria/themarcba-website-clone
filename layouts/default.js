@@ -19,12 +19,12 @@ export default function Layout({ children, router }) {
   const pageTransitionAnimation = {
     pageAnimate: {
       opacity: 1,
+      transition: {
+        duration: 0.4,
+      },
     },
     pageInitial: {
       opacity: 0,
-    },
-    transition: {
-      duration: 0.5,
     },
   };
 
@@ -42,7 +42,6 @@ export default function Layout({ children, router }) {
           key={router.route}
           initial="pageInitial"
           animate="pageAnimate"
-          transition="transition"
           variants={pageTransitionAnimation}
         >
           {cloneElement(children, { projects })}
